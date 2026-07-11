@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>トラック情報詳細表示</title>
+    <link rel="stylesheet" href="content.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>トラック情報詳細表示</h1>
+        <p>
+            SourceまたはConvertedのトラック一覧で該当行を選択し、右クリックメニューから表示できる、<br />
+            トラック内の個々のMIDIイベントを一覧表示するウィンドウです。
+        </p>
+        <div class="note">
+            SourceまたはConvertedの画面で対象のトラック行を選択し、右クリック→コンテキストメニューから開きます。
+        </div>
+        <div class="image-wrapper">
+            <img src="image/TrackDetail.png" alt="QBMidiconの画面イメージ" />
+        </div>
+
+        <p>画面構成</p>
+        <div class="contextmenu-wrapper">
+            <div class="table-area">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>エリア</th>
+                            <th>項目</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3">左側：Filter / Lyric</td>
+                            <td>Filter Off</td>
+                            <td>フィルタを適用せず、トラック内の全イベントを表示します</td>
+                        </tr>
+                        <tr>
+                            <td>Filter On</td>
+                            <td>右側で選択したイベント種別のみを表示します</td>
+                        </tr>
+                        <tr>
+                            <td>Lyric</td>
+                            <td>表示モードの切り替えではなく、ファイル内に歌詞イベントがある場合にそのトラックのMIDIデータ（ノート）へ歌詞イベントを引き当てて挿入する機能です</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">右側：Filter（イベント種別選択）</td>
+                            <td>META</td>
+                            <td>メタイベントの表示・非表示を種別ごとに選択します</td>
+                        </tr>
+                        <tr>
+                            <td>CHANNEL VOICE</td>
+                            <td>アフタータッチ、ノート・オン/オフ、ピッチベンドなどを選択します</td>
+                        </tr>
+                        <tr>
+                            <td>SYSEX</td>
+                            <td>システムエクスクルーシブイベントを選択します</td>
+                        </tr>
+                        <tr>
+                            <td>CONTROL CHANGE</td>
+                            <td>Bank MSB、Modulation、Volumeなど各コントロールチェンジを選択します</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <p>イベント一覧の項目</p>
+        <div class="table-area">
+            <table>
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>説明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>No.</td>
+                        <td>イベントの通し番号</td>
+                    </tr>
+                    <tr>
+                        <td>Measure</td>
+                        <td>イベントの位置（小節：拍：ティック）</td>
+                    </tr>
+                    <tr>
+                        <td>Ticks</td>
+                        <td>イベントの位置（ティック単位の絶対値）</td>
+                    </tr>
+                    <tr>
+                        <td>CH</td>
+                        <td>MIDIチャンネル</td>
+                    </tr>
+                    <tr>
+                        <td>Message</td>
+                        <td>イベントの内容（例：ControlChange BankMSB 0、NoteOn Note A2 (57) Velocity 70 など）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note">
+            この画面のフィルタ設定は表示上の絞り込みのみで、Event Filter（変換設定）には影響しません。実際に変換結果から除外したい場合はEvent Filterページの設定を変更してください。
+        </div>
+    </div>
+</body>
+
+</html>

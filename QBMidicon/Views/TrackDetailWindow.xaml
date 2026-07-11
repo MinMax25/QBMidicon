@@ -1,0 +1,161 @@
+﻿<mah:MetroWindow
+    x:Class="QBMidicon.Views.TrackDetailWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:libQBResx="clr-namespace:libQB.Properties;assembly=libQB"
+    xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+    xmlns:properties="clr-namespace:QBMidicon.Properties"
+    xmlns:templateSelectors="clr-namespace:QBMidicon.TemplateSelectors"
+    Style="{StaticResource CustomMetroWindow}"
+    Dialog:DialogParticipation.Register="{Binding}"
+    mc:Ignorable="d"
+    WindowStartupLocation="CenterScreen"
+    TitleCharacterCasing="Normal"
+    ResizeMode="CanResizeWithGrip"
+    Icon="/Resources/QB.ico"
+    Width="1100"
+    Height="700"
+    Title="{x:Static properties:Resources.AppDisplayName}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="260"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <GroupBox Grid.Row="0" Style="{StaticResource GroupBoxBaseStyle}" Header="Filter">
+                <GroupBox.Resources>
+                    <Style TargetType="CheckBox" BasedOn="{StaticResource MahApps.Styles.CheckBox}">
+                        <Setter Property="Margin" Value="4"/>
+                    </Style>
+                </GroupBox.Resources>
+                
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel.Resources>
+                        <Style TargetType="RadioButton" BasedOn="{StaticResource MahApps.Styles.RadioButton}">
+                            <Setter Property="Margin" Value="8"/>
+                            <Setter Property="Width" Value="100"/>
+                            <Setter Property="GroupName" Value="Filter"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <RadioButton Content="Filter Off" IsChecked="{Binding FilterOff}"/>
+                    <RadioButton Content="Filter On" IsChecked="{Binding FilterOn}"/>
+                    <RadioButton Content="Lyric" IsChecked="{Binding LyricMatched}" Visibility="{Binding IsNotSourceTrack, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                </StackPanel>
+            </GroupBox>
+            
+            <DataGrid Grid.Row="1" Style="{StaticResource DataGridStyle}" ItemsSource="{Binding Events}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="No." Binding="{Binding Seqnum}">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource MahApps.Styles.DataGridCell}">
+                                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Right"/>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Measure" Binding="{Binding Converter={StaticResource BreakedTimeConverter}}"/>
+                    <DataGridTextColumn Header="Ticks" Binding="{Binding AbsoluteTick}">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource MahApps.Styles.DataGridCell}">
+                                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Right"/>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="CH" Binding="{Binding Converter={StaticResource ChannelConverter}}">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource MahApps.Styles.DataGridCell}">
+                                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Message" Binding="{Binding Converter={StaticResource MidiMessageConverter}}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0" Content="Filter"/>
+            
+            <ScrollViewer Grid.Row="1">
+                <ScrollViewer.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem 
+                            Header="Uncheck All" 
+                            Command="{Binding PlacementTarget.DataContext.UncheckAllFiltersCommand, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                        <MenuItem
+                            Header="Reset Default"
+                            Command="{Binding PlacementTarget.DataContext.ResetDefaultFiltersCommand, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
+                    </ContextMenu>
+                </ScrollViewer.ContextMenu>
+
+                <StackPanel>
+                    <StackPanel.Resources>
+                        <Style TargetType="Expander" BasedOn="{StaticResource MahApps.Styles.Expander}">
+                            <Setter Property="HeaderTemplate">
+                                <Setter.Value>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding}"/>
+                                    </DataTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Expander Header="Meta">
+                        <ListBox ItemsSource="{Binding FilterMeta}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <CheckBox Content="{Binding Key}" IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Expander>
+                    <Expander Header="Channel Voice">
+                        <ListBox ItemsSource="{Binding FilterChannelVoice}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <CheckBox Content="{Binding Key}" IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Expander>
+                    <Expander Header="SysEx">
+                        <ListBox ItemsSource="{Binding FilterSysEx}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <CheckBox Content="{Binding Key}" IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Expander>
+                    <Expander Header="Control Change">
+                        <ListBox ItemsSource="{Binding FilterControlChange}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <CheckBox Content="{Binding Key}" IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Expander>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</mah:MetroWindow>

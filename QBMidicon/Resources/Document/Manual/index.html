@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>QBMidicon 操作ガイド</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 上部タイトルバー -->
+    <header>
+        <img src="image/QB.png" />
+        QBMidicon 操作ガイド
+    </header>
+
+    <!-- 中央エリア -->
+    <div class="main">
+        <!-- 左サイドバー -->
+        <div class="root" id="sidebar">
+            <h1>インデックス</h1>
+            <ul>
+                <!-- はじめに -->
+                <li>
+                    <a href="intro.html" target="contents">はじめに</a>
+                    <ul>
+                        <li><a href="intro.html#system-requirements" target="contents">システム要件</a></li>
+                        <li><a href="intro.html#purpose" target="contents">概要</a></li>
+                        <li><a href="intro.html#disclaimer" target="contents">免責事項</a></li>
+                    </ul>
+                </li>
+
+                <!-- インストール -->
+                <li><a href="install.html" target="contents">インストール、アンインストール</a></li>
+
+                <!-- 画面構成と使い方 -->
+                <li>
+                    画面構成と使い方
+                    <ul>
+                        <li><a href="source.html" target="contents">Source</a></li>
+                        <li><a href="converted.html" target="contents">Converted</a></li>
+                        <li><a href="eventfilter.html" target="contents">Event Filter</a></li>
+                        <li><a href="convertsetting.html" target="contents">Convert Setting</a></li>
+                        <li><a href="setting.html" target="contents">Setting</a></li>
+                        <li><a href="savesmf.html" target="contents">Save SMF File</a></li>
+                        <li><a href="trackdetail.html" target="contents">トラック情報詳細表示</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 右側コンテンツ -->
+        <div class="contents">
+            <iframe name="contents" src="intro.html"></iframe>
+        </div>
+
+        <!-- サイドバー開閉ボタン -->
+        <button id="toggleSidebar">☰</button>
+    </div>
+
+    <!-- フッター -->
+    <footer>
+        <p><small>&copy; 2025 Min Max</small></p>
+    </footer>
+
+    <script src="layout.js"></script>
+</body>
+
+</html>

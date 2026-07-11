@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event Filter</title>
+    <link rel="stylesheet" href="content.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Event Filter</h1>
+        <p>
+            変換時に残す／除外するMIDIイベントの種類をチェックボックスで選択します。<br />
+            チェックを入れた項目のみが変換後データに含まれます。
+        </p>
+        <div class="image-wrapper">
+            <img src="image/EventFilter.png" alt="QBMidiconの画面イメージ" />
+        </div>
+
+        <p>カテゴリ</p>
+        <ul>
+            <li>Meta：メタイベント
+                <ul>
+                    <li>MIDIチャンネルプリフィックス、著作権表示、キューポイント、デバイス名、インストゥルメント名、調の設定、歌詞、マーカー、テキスト、ポート指定、プログラム名、シーケンス番号、シーケンサ特定メタイベント、シーケンス名（曲タイトル）/トラック名、SMPTEオフセット、テンポ、拍子の設定、XF Style コード名、XF Style ガイドトラックフラグ、XF Style リハーサルマークなどの項目を個別に選択できます</li>
+                </ul>
+            </li>
+            <li>Channel Voice：チャンネルボイスイベント
+                <ul>
+                    <li>アフタータッチ、ノート・オフ、ノート・オン、ピッチベンド、ポリフォニックキープレッシャー、プログラムチェンジを選択できます</li>
+                </ul>
+            </li>
+            <li>SysEx：システムエクスクルーシブイベント
+                <ul>
+                    <li>一般、GMシステムオフ/オン、GM2システムオン、GSリセット、GSリズムパート指定、XGシステムオンを選択できます</li>
+                </ul>
+            </li>
+            <li>Control Change：コントロールチェンジ
+                <ul>
+                    <li>Bank MSB、Modulation、Breath、Foot Controller、Portamento Time、Data Entry MSB、Volume、Balance、Pan、Expression をはじめとする各CC番号を個別に選択できます</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="note">
+            チェックを外した項目は変換時に除外され、Convertedのトラック情報やEvents数にも反映されます。
+        </div>
+    </div>
+</body>
+
+</html>

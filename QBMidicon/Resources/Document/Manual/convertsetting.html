@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Setting</title>
+    <link rel="stylesheet" href="content.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Convert Setting</h1>
+        <p>変換処理に関する各種オプションを設定します</p>
+        <div class="image-wrapper">
+            <img src="image/ConvertSetting.png" alt="QBMidiconの画面イメージ" />
+        </div>
+
+        <div class="table-area">
+            <table class="grid-table">
+                <thead>
+                    <tr>
+                        <th>カテゴリ</th>
+                        <th>項目</th>
+                        <th>値 / 状態</th>
+                        <th>説明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Common -->
+                    <tr>
+                        <td rowspan="6">Common</td>
+                        <td>Channel Fix</td>
+                        <td>On/Off</td>
+                        <td>チャンネル番号を固定・補正します</td>
+                    </tr>
+                    <tr>
+                        <td>Insert Track Name</td>
+                        <td>On/Off</td>
+                        <td>トラック名イベントを自動挿入します</td>
+                    </tr>
+                    <tr>
+                        <td>Remove Program Change</td>
+                        <td>On/Off</td>
+                        <td>プログラムチェンジイベントを除去します</td>
+                    </tr>
+                    <tr>
+                        <td>Replace Note On</td>
+                        <td>On/Off</td>
+                        <td>ノートオンイベントの内容を置き換えます</td>
+                    </tr>
+                    <tr>
+                        <td>Create Code Track</td>
+                        <td>On/Off</td>
+                        <td>コード情報用のトラックを作成します</td>
+                    </tr>
+                    <tr>
+                        <td>Text Encoding</td>
+                        <td>UTF8 ほか</td>
+                        <td>テキストデータの文字エンコーディングを指定します</td>
+                    </tr>
+
+                    <!-- Lyric -->
+                    <tr>
+                        <td rowspan="2">Lyric</td>
+                        <td>Adjustment</td>
+                        <td>On/Off</td>
+                        <td>歌詞データのタイミングなどを調整します</td>
+                    </tr>
+                    <tr>
+                        <td>Padding Plus</td>
+                        <td>On/Off</td>
+                        <td>歌詞の区切りに padding（+）を付与します</td>
+                    </tr>
+
+                    <!-- SRT -->
+                    <tr>
+                        <td rowspan="2">SRT</td>
+                        <td>SRT Offset</td>
+                        <td>ms（例：-300）</td>
+                        <td>SRT字幕データの表示タイミングをオフセットします</td>
+                    </tr>
+                    <tr>
+                        <td>Remove Comment</td>
+                        <td>On/Off</td>
+                        <td>SRTデータ内のコメントを除去します</td>
+                    </tr>
+
+                    <!-- XF Option -->
+                    <tr>
+                        <td>XF Option</td>
+                        <td>XFStyle Convert</td>
+                        <td>On/Off</td>
+                        <td>XF Style形式への変換を行います</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
