@@ -1,10 +1,10 @@
 # QBMidicon
 
-SMF（Standard MIDI File）を読み込み、DAWで使いやすい形式にフィルタリング・変換するWindows用ツールです。
+SMF（Standard MIDI File）を読み込み、DAWで使いやすい形式にフィルタリング・変換するWindows用ツールです。  
+
 A Windows tool that loads Standard MIDI Files (SMF) and filters/converts them into a format that's easier to use in a DAW.
 
 <img width="1300" height="800" alt="Image" src="QBMidicon/Resources/Document/Manual/image/SourceTracks.png" />
----
 
 ## 概要 / Overview
 
