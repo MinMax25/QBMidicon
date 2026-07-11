@@ -1,0 +1,199 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <RootNamespace>QBMidicon</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest></ApplicationManifest>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Resources\QB.ico</ApplicationIcon>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Config\Instrument\GM.json" />
+    <None Remove="Config\Instrument\GS.json" />
+    <None Remove="Config\Instrument\XG.json" />
+    <None Remove="LICENSE" />
+    <None Remove="Resources\Document\Manual\base.html" />
+    <None Remove="Resources\Document\Manual\basic.html" />
+    <None Remove="Resources\Document\Manual\content.css" />
+    <None Remove="Resources\Document\Manual\converted.html" />
+    <None Remove="Resources\Document\Manual\convertsetting.html" />
+    <None Remove="Resources\Document\Manual\eventfilter.html" />
+    <None Remove="Resources\Document\Manual\image\Converted.png" />
+    <None Remove="Resources\Document\Manual\image\ConvertedData.png" />
+    <None Remove="Resources\Document\Manual\image\ConvertSetting.png" />
+    <None Remove="Resources\Document\Manual\image\EventFilter.png" />
+    <None Remove="Resources\Document\Manual\image\intoro_pic_1.png" />
+    <None Remove="Resources\Document\Manual\image\page-source.html" />
+    <None Remove="Resources\Document\Manual\image\QB.png" />
+    <None Remove="Resources\Document\Manual\image\SaveSMF.png" />
+    <None Remove="Resources\Document\Manual\image\SaveSMFData.png" />
+    <None Remove="Resources\Document\Manual\image\Setting.png" />
+    <None Remove="Resources\Document\Manual\image\setting_pic_1.png" />
+    <None Remove="Resources\Document\Manual\image\Source.png" />
+    <None Remove="Resources\Document\Manual\image\SourceKey.png" />
+    <None Remove="Resources\Document\Manual\image\SourceLyric.png" />
+    <None Remove="Resources\Document\Manual\image\SourceSRT.png" />
+    <None Remove="Resources\Document\Manual\image\SourceTempo.png" />
+    <None Remove="Resources\Document\Manual\image\SourceTracks.png" />
+    <None Remove="Resources\Document\Manual\image\TrackDetail.png" />
+    <None Remove="Resources\Document\Manual\index.html" />
+    <None Remove="Resources\Document\Manual\install.html" />
+    <None Remove="Resources\Document\Manual\intro.html" />
+    <None Remove="Resources\Document\Manual\layout.js" />
+    <None Remove="Resources\Document\Manual\page-common.html" />
+    <None Remove="Resources\Document\Manual\page-converted.html" />
+    <None Remove="Resources\Document\Manual\page.html" />
+    <None Remove="Resources\Document\Manual\savesmf.html" />
+    <None Remove="Resources\Document\Manual\score.html" />
+    <None Remove="Resources\Document\Manual\ScreenLayout.html" />
+    <None Remove="Resources\Document\Manual\setting.html" />
+    <None Remove="Resources\Document\Manual\source.html" />
+    <None Remove="Resources\Document\Manual\style.css" />
+    <None Remove="Resources\Document\Manual\trackdetail.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Config\Instrument\GM.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Instrument\GS.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Instrument\XG.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LICENSE">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\content.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\converted.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\convertsetting.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\eventfilter.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\ConvertedData.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\QB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\SaveSMFData.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\SourceKey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\SourceLyric.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\SourceSRT.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\SourceTempo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\SourceTracks.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\TrackDetail.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\intro.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\layout.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\trackdetail.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Document\Manual\install.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\setting.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\QB.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="libMidi" Version="1.0.6" />
+    <PackageReference Include="libQB" Version="1.0.0" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.11" />
+    <PackageReference Include="MahApps.Metro.IconPacks.FontAwesome" Version="6.2.1" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="6.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.9" />
+    <PackageReference Include="NAudio.Midi" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.ja.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Document\Manual\image\Converted.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\ConvertSetting.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\EventFilter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\SaveSMF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\Setting.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\image\Source.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\savesmf.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\source.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

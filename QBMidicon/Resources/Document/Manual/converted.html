@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Converted</title>
+    <link rel="stylesheet" href="content.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Converted</h1>
+        <p>Event Filter と Convert Setting の内容を反映した、変換後のトラック一覧を表示します</p>
+        <div class="image-wrapper">
+            <div class="image-area">
+                <img src="image/ConvertedData.png" alt="QBMidiconの画面イメージ" />
+            </div>
+        </div>
+
+        <div class="note">
+            行を選択して右クリックすると、そのトラックのイベントを詳細表示できます（詳しくは<a href="trackdetail.html" target="contents">トラック情報詳細表示</a>を参照）。
+        </div>
+
+        <p>画面項目</p>
+        <div class="table-area">
+            <table>
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>説明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>No</td>
+                        <td>トラック番号</td>
+                    </tr>
+                    <tr>
+                        <td>Track Name</td>
+                        <td>トラック名</td>
+                    </tr>
+                    <tr>
+                        <td>CH</td>
+                        <td>MIDIチャンネル</td>
+                    </tr>
+                    <tr>
+                        <td>Vol</td>
+                        <td>トラックのボリューム値</td>
+                    </tr>
+                    <tr>
+                        <td>Pan</td>
+                        <td>トラックのパン値</td>
+                    </tr>
+                    <tr>
+                        <td>Events</td>
+                        <td>トラック内のイベント数</td>
+                    </tr>
+                    <tr>
+                        <td>Drum</td>
+                        <td>ドラムトラックかどうかの判定・指定</td>
+                    </tr>
+                    <tr>
+                        <td>Lyric %</td>
+                        <td>そのトラックのMIDIデータ（ノート）が歌詞イベントとどのくらい一致しているかを表す割合です</td>
+                    </tr>
+                    <tr>
+                        <td>Lyric</td>
+                        <td>歌詞データの有無・内容</td>
+                    </tr>
+                    <tr>
+                        <td>Note Rang</td>
+                        <td>トラック内で使用されているノートの音域</td>
+                    </tr>
+                    <tr>
+                        <td>Transpose</td>
+                        <td>トラックごとのトランスポーズ量</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

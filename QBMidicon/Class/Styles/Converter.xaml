@@ -1,0 +1,20 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:libQB="clr-namespace:libQB.ValueConverters;assembly=libQB"
+    xmlns:local="clr-namespace:QBMidicon.Class.ValueConverters">
+
+    <!-- Converter -->
+    <libQB:InverseBoolConverter x:Key="InverseBool"/>
+    <libQB:TrimConverter x:Key="TrimConverter"/>
+    <libQB:BaseThemeConverter x:Key="BaseThemeConverter"/>
+    <libQB:IncrementConverter x:Key="Increment"/>
+    <local:BreakedTimeConverter x:Key="BreakedTimeConverter"/>
+    <local:ChannelConverter x:Key="ChannelConverter"/>
+    <local:MidiMessageConverter x:Key="MidiMessageConverter"/>
+    <local:VolumeConverter x:Key="VolumeConverter"/>
+    <local:PanConverter x:Key="PanConverter"/>
+    <local:PitchRangeConverter x:Key="PitchRangeConverter"/>
+    <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+
+</ResourceDictionary>

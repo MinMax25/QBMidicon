@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Save SMF File</title>
+    <link rel="stylesheet" href="content.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Save SMF File</h1>
+        <p>変換したMIDIデータを任意のフォルダへ保存します。File メニューから開くダイアログです。</p>
+        <div class="image-wrapper">
+            <img src="image/SaveSMFData.png" alt="QBMidiconの画面イメージ" />
+        </div>
+
+        <p>画面項目</p>
+        <ul>
+            <li>Save Folder：保存先フォルダ
+                <ul>
+                    <li>Folder Path：保存先フォルダのパスを指定します（虫眼鏡アイコンから参照可能）</li>
+                </ul>
+            </li>
+            <li>File to be saved：保存するファイル
+                <ul>
+                    <li>File Name Prefix：出力ファイル名の接頭辞を指定します</li>
+                    <li>Raw Data：フィルタ適用前の生データを保存します</li>
+                    <li>Filtered Data：Event Filter適用後のデータを保存します</li>
+                    <li>Lyric Track Data：Synthesizer Vに取り込める形式の、歌詞付きヴォーカルMIDIを単独のファイルとして出力します</li>
+                    <li>Lyric Text Data：歌詞テキストデータを保存します</li>
+                    <li>Lyric SRT Data：歌詞SRT（字幕）データを保存します</li>
+                </ul>
+            </li>
+            <li>SAVE：チェックした項目を指定フォルダへ書き出します</li>
+        </ul>
+    </div>
+</body>
+
+</html>

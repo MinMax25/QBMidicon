@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Source</title>
+    <link rel="stylesheet" href="content.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Source</h1>
+        <p>読み込んだSMFファイルの情報とトラック一覧を表示します</p>
+        <div class="image-wrapper">
+            <div class="image-area">
+                <img src="image/SourceTracks.png" alt="QBMidiconの画面イメージ" />
+            </div>
+        </div>
+
+        <p>画面項目</p>
+        <ul>
+            <li>File Info：読み込んだファイルの基本情報
+                <ul>
+                    <li>Path：読み込んだファイルのパスが表示されます</li>
+                    <li>Reload：ファイルを再読み込みします</li>
+                    <li>Format：SMFフォーマット（Format0など）が表示されます</li>
+                    <li>Track Count：トラック数が表示されます</li>
+                    <li>Division：タイムベース（分解能）が表示されます</li>
+                    <li>MIDI Type：MIDIファイルの種別（XGなど）が表示されます</li>
+                </ul>
+            </li>
+            <li>タブ切り替え
+                <ul>
+                    <li>Tracks：トラック一覧（No / Track Name / CH / Events）を表示します</li>
+                    <li>Tempo：テンポ情報を表示します</li>
+                    <li>Key：調（キー）情報を表示します</li>
+                    <li>Lyric：歌詞データを表示します</li>
+                    <li>SRT：字幕（SRT）データを表示します</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Tracks タブ</h2>
+        <p>読み込んだSMF内の各トラックを一覧表示します</p>
+        <div class="table-area">
+            <table>
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>説明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>No</td>
+                        <td>トラック番号</td>
+                    </tr>
+                    <tr>
+                        <td>Track Name</td>
+                        <td>トラック名</td>
+                    </tr>
+                    <tr>
+                        <td>CH</td>
+                        <td>MIDIチャンネル</td>
+                    </tr>
+                    <tr>
+                        <td>Events</td>
+                        <td>トラック内のイベント数</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="note">
+            行を選択して右クリックすると、そのトラックのイベントを詳細表示できます（詳しくは「トラック情報詳細表示」を参照）。
+        </div>
+
+        <h2>Tempo タブ</h2>
+        <p>ファイル内のテンポ変化イベントを一覧表示します</p>
+        <div class="image-wrapper">
+            <div class="image-area">
+                <img src="image/SourceTempo.png" alt="QBMidiconの画面イメージ" />
+            </div>
+        </div>
+        <div class="table-area">
+            <table>
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>説明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Measure</td>
+                        <td>イベントの位置（小節：拍：ティック）</td>
+                    </tr>
+                    <tr>
+                        <td>Ticks</td>
+                        <td>イベントの位置（ティック単位の絶対値）</td>
+                    </tr>
+                    <tr>
+                        <td>Message</td>
+                        <td>テンポ変化の内容（例：Tempo bpm=100.00）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Key タブ</h2>
+        <p>ファイル内の調（キー）設定イベントを一覧表示します</p>
+        <div class="image-wrapper">
+            <div class="image-area">
+                <img src="image/SourceKey.png" alt="QBMidiconの画面イメージ" />
+            </div>
+        </div>
+        <div class="table-area">
+            <table>
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>説明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Measure</td>
+                        <td>イベントの位置（小節：拍：ティック）</td>
+                    </tr>
+                    <tr>
+                        <td>Ticks</td>
+                        <td>イベントの位置（ティック単位の絶対値）</td>
+                    </tr>
+                    <tr>
+                        <td>Message</td>
+                        <td>調の設定内容（例：KeySignature ロ短調）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Lyric タブ</h2>
+        <p>ファイル内の歌詞イベントをテキストとして一覧表示します</p>
+        <div class="image-wrapper">
+            <div class="image-area">
+                <img src="image/SourceLyric.png" alt="QBMidiconの画面イメージ" />
+            </div>
+        </div>
+        <ul>
+            <li>[Page]：改ページ（歌詞表示の区切り）を表します</li>
+            <li>漢字の後ろの角括弧内はふりがなを表します（例：魔[ま]法[ほう]）</li>
+        </ul>
+
+        <h2>SRT タブ</h2>
+        <p>歌詞データを字幕（SRT）形式のタイムコード付きテキストとして表示します</p>
+        <div class="image-wrapper">
+            <div class="image-area">
+                <img src="image/SourceSRT.png" alt="QBMidiconの画面イメージ" />
+            </div>
+        </div>
+        <ul>
+            <li>各ブロックの先頭の番号は字幕の通し番号です</li>
+            <li>2行目は表示開始時刻 --&gt; 終了時刻（時:分:秒,ミリ秒）です</li>
+            <li>3行目以降が実際に表示される歌詞テキストです</li>
+        </ul>
+    </div>
+</body>
+
+</html>
