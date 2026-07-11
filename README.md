@@ -3,7 +3,7 @@
 SMF（Standard MIDI File）を読み込み、DAWで使いやすい形式にフィルタリング・変換するWindows用ツールです。
 A Windows tool that loads Standard MIDI Files (SMF) and filters/converts them into a format that's easier to use in a DAW.
 
-![screenshot](QBMidicon/Resources/Document/Manual/imgae/SourceTracks.png)
+<img src="QBMidicon/Resources/Document/Manual/imgae/SourceTracks.png" />
 
 ---
 
