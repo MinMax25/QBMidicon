@@ -80,8 +80,7 @@ This software is freeware, free to use for personal purposes only. The author/pr
 
 ## ライセンス / License
 
-MIT License. 詳細は [LICENSE](LICENSE) を参照してください。
-MIT License. See [LICENSE](LICENSE) for details.
+MIT License.
 
 ---
 
