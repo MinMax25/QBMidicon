@@ -62,7 +62,8 @@ To uninstall, simply delete the extracted folder (the app does not use the Windo
 
 ## 操作ガイド / User Guide
 
-詳しい操作方法は [docs](https://minmax25.github.io/QBMidicon/) を参照してください。
+詳しい操作方法は [docs](https://minmax25.github.io/QBMidicon/) を参照してください。  
+
 For detailed usage instructions, see the [docs](https://minmax25.github.io/QBMidicon/) site.
 
 ---
