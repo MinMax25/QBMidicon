@@ -15,7 +15,6 @@
     <None Remove="Config\Instrument\GM.json" />
     <None Remove="Config\Instrument\GS.json" />
     <None Remove="Config\Instrument\XG.json" />
-    <None Remove="LICENSE" />
     <None Remove="Resources\Document\Manual\base.html" />
     <None Remove="Resources\Document\Manual\basic.html" />
     <None Remove="Resources\Document\Manual\content.css" />
@@ -65,9 +64,6 @@
     </Content>
     <Content Include="Config\Instrument\XG.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="LICENSE">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Document\Manual\content.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
