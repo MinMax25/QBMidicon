@@ -26,6 +26,7 @@ QBMidicon loads SMF files and lets you inspect their tracks and events, remove u
 
 - **日本語**
   - SMFファイルの読み込み・トラック/テンポ/キー/歌詞/SRT情報の確認
+  - Program Change を含むトラックを、読み込み時に自動でインストゥルメント（音色）ごとのトラックに分解
   - Event Filter によるイベント種別ごとの変換対象選別
   - Convert Setting による変換オプションの詳細設定
   - トラックごとのイベント詳細表示（右クリックメニューから）
@@ -35,6 +36,7 @@ QBMidicon loads SMF files and lets you inspect their tracks and events, remove u
 
 - **English**
   - Load SMF files and inspect track / tempo / key / lyric / SRT information
+  - Automatically splits a track containing Program Change events into separate tracks per instrument on load
   - Select which event types are included in the conversion via Event Filter
   - Fine-tune conversion behavior via Convert Setting
   - View per-track event details (via right-click context menu)
