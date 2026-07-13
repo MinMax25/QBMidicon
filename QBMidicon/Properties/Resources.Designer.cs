@@ -189,9 +189,9 @@ namespace QBMidicon.Properties {
         /// <summary>
         ///   Copy Text To Clipboard に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string ContextKitPitchesCopyTextToClibBoard {
+        public static string ContextKitPitchesCopyTextToClipBoard {
             get {
-                return ResourceManager.GetString("ContextKitPitchesCopyTextToClibBoard", resourceCulture);
+                return ResourceManager.GetString("ContextKitPitchesCopyTextToClipBoard", resourceCulture);
             }
         }
         
@@ -225,9 +225,9 @@ namespace QBMidicon.Properties {
         /// <summary>
         ///   &apos;{0}&apos; is already in use! に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string DuplicateNaem {
+        public static string DuplicateName {
             get {
-                return ResourceManager.GetString("DuplicateNaem", resourceCulture);
+                return ResourceManager.GetString("DuplicateName", resourceCulture);
             }
         }
         
@@ -241,7 +241,7 @@ namespace QBMidicon.Properties {
         }
         
         /// <summary>
-        ///   Abount QBMidicon に類似しているローカライズされた文字列を検索します。
+        ///   About QBMidicon に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MenuHelpAbout {
             get {
@@ -333,9 +333,9 @@ namespace QBMidicon.Properties {
         /// <summary>
         ///   Start Up Page に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string SettingSatartUpPage {
+        public static string SettingStartUpPage {
             get {
-                return ResourceManager.GetString("SettingSatartUpPage", resourceCulture);
+                return ResourceManager.GetString("SettingStartUpPage", resourceCulture);
             }
         }
         

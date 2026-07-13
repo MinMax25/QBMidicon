@@ -150,7 +150,7 @@
   <data name="Complete" xml:space="preserve">
     <value>処理完了！</value>
   </data>
-  <data name="DuplicateNaem" xml:space="preserve">
+  <data name="DuplicateName" xml:space="preserve">
     <value>'{0}' はすでに登録されています！</value>
   </data>
   <data name="PasteConfirm" xml:space="preserve">
@@ -177,7 +177,7 @@
   <data name="NewFile" xml:space="preserve">
     <value>新規作成</value>
   </data>
-  <data name="SettingSatartUpPage" xml:space="preserve">
+  <data name="SettingStartUpPage" xml:space="preserve">
     <value>スタートアップページ</value>
   </data>
   <data name="SettingLanguage" xml:space="preserve">
@@ -204,8 +204,8 @@
   <data name="ContextKitPitchesCompressForward" xml:space="preserve">
     <value>名前付きを前方に詰める</value>
   </data>
-  <data name="ContextKitPitchesCopyTextToClibBoard" xml:space="preserve">
-    <value>テキストをクリップボートにコピー</value>
+  <data name="ContextKitPitchesCopyTextToClipBoard" xml:space="preserve">
+    <value>テキストをクリップボードにコピー</value>
   </data>
   <data name="DialogAutomaticFill" xml:space="preserve">
     <value>自動補間</value>
@@ -220,7 +220,7 @@
     <value>ファイルを開く</value>
   </data>
   <data name="MenuHelpAbout" xml:space="preserve">
-    <value>QBTemplateについて</value>
+    <value>QBMidiconについて</value>
   </data>
   <data name="Title_SourceDataPage" xml:space="preserve">
     <value>ソース</value>
