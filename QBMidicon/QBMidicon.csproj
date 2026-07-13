@@ -18,6 +18,7 @@
     <None Remove="Resources\Document\Manual\base.html" />
     <None Remove="Resources\Document\Manual\basic.html" />
     <None Remove="Resources\Document\Manual\content.css" />
+    <None Remove="Resources\Document\Manual\conversion.html" />
     <None Remove="Resources\Document\Manual\converted.html" />
     <None Remove="Resources\Document\Manual\convertsetting.html" />
     <None Remove="Resources\Document\Manual\eventfilter.html" />
@@ -67,6 +68,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Document\Manual\content.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Document\Manual\conversion.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Document\Manual\converted.html">
