@@ -150,7 +150,7 @@
   <data name="Complete" xml:space="preserve">
     <value>Complete!</value>
   </data>
-  <data name="DuplicateNaem" xml:space="preserve">
+  <data name="DuplicateName" xml:space="preserve">
     <value>'{0}' is already in use!</value>
   </data>
   <data name="PasteConfirm" xml:space="preserve">
@@ -177,7 +177,7 @@
   <data name="NewFile" xml:space="preserve">
     <value>New File</value>
   </data>
-  <data name="SettingSatartUpPage" xml:space="preserve">
+  <data name="SettingStartUpPage" xml:space="preserve">
     <value>Start Up Page</value>
   </data>
   <data name="SettingLanguage" xml:space="preserve">
@@ -204,7 +204,7 @@
   <data name="ContextKitPitchesCompressForward" xml:space="preserve">
     <value>Compress Forward</value>
   </data>
-  <data name="ContextKitPitchesCopyTextToClibBoard" xml:space="preserve">
+  <data name="ContextKitPitchesCopyTextToClipBoard" xml:space="preserve">
     <value>Copy Text To Clipboard</value>
   </data>
   <data name="DialogAutomaticFill" xml:space="preserve">
@@ -220,7 +220,7 @@
     <value>Open File</value>
   </data>
   <data name="MenuHelpAbout" xml:space="preserve">
-    <value>Abount QBMidicon</value>
+    <value>About QBMidicon</value>
   </data>
   <data name="Title_SourceDataPage" xml:space="preserve">
     <value>Source</value>

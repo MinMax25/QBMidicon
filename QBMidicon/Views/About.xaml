@@ -33,7 +33,7 @@
         <StackPanel Grid.Row="0" Grid.Column="0" Margin="8">
             <Image Width="140" Height="140" Source="/Resources/QB.ico"/>
             <StackPanel>
-                <TextBlock Margin="4" d:Text="Copy Rignht" Text="{Binding Copyright}" HorizontalAlignment="Center"/>
+                <TextBlock Margin="4" d:Text="Copyright" Text="{Binding Copyright}" HorizontalAlignment="Center"/>
                 <TextBlock Margin="4" d:Text="Application Name" Text="{Binding ApplicationName}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <TextBlock Margin="4" d:Text="Version" Text="{Binding Version}" HorizontalAlignment="Right" VerticalAlignment="Top"/>
             </StackPanel>
