@@ -13,7 +13,7 @@ namespace QBMidicon.Class.Services
 
         string ThemeColor { get; set; }
 
-        Languages Language { get; set; }
+        string Language { get; set; }
 
         string LastOpenedFilePath { get; set; }
 

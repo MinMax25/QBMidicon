@@ -8,6 +8,7 @@
     <libQB:InverseBoolConverter x:Key="InverseBool"/>
     <libQB:TrimConverter x:Key="TrimConverter"/>
     <libQB:BaseThemeConverter x:Key="BaseThemeConverter"/>
+    <local:FlagConverter x:Key="FlagConverter"/>
     <libQB:IncrementConverter x:Key="Increment"/>
     <local:BreakedTimeConverter x:Key="BreakedTimeConverter"/>
     <local:ChannelConverter x:Key="ChannelConverter"/>

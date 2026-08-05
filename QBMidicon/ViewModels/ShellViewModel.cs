@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
@@ -94,25 +95,25 @@ public partial class ShellViewModel : ViewModelBase, IWindowClosingAware
     [
         new HamburgerMenuIconItem()
         {
-            Label = Resources.Title_SourceDataPage,
+            Label = App.Text("Title_SourceDataPage", "Source"),
             Icon = ClonePackIcon(PageIcon.SourceDataPage),
             TargetPageType = typeof(SourceDataViewModel)
         },
         new HamburgerMenuIconItem()
         {
-            Label = Resources.Title_ConvertedDataPage,
+            Label = App.Text("Title_ConvertedDataPage", "Converted"),
             Icon = ClonePackIcon(PageIcon.ConvertedDataPage),
             TargetPageType = typeof(ConvertedDataViewModel)
         },
         new HamburgerMenuIconItem()
         {
-            Label = Resources.Title_EventFilterPage,
+            Label = App.Text("Title_EventFilterPage", "Event Filter"),
             Icon = ClonePackIcon(PageIcon.EventFilterPage),
             TargetPageType = typeof(EventFilterViewModel)
         },
         new HamburgerMenuIconItem()
         {
-            Label = Resources.Title_ConvertSettingPage,
+            Label = App.Text("Title_ConvertSettingPage", "Convert Settings"),
             Icon = ClonePackIcon(PageIcon.ConvertSettingPage),
             TargetPageType = typeof(ConvertSettingPageViewModel)
         }
@@ -122,7 +123,7 @@ public partial class ShellViewModel : ViewModelBase, IWindowClosingAware
     [
         new HamburgerMenuIconItem()
         {
-            Label = libQB.Properties.Resources.Setting_PageTitle,
+            Label = App.Text("SettingPageTitle", "Settings"),
             Icon = ClonePackIcon(PageIcon.SettingPage),
             TargetPageType = typeof(SettingViewModel)
         }
@@ -144,6 +145,7 @@ public partial class ShellViewModel : ViewModelBase, IWindowClosingAware
     {
         _title = Resources.AppDisplayName;
         _midiData = midiData;
+        Setting.PropertyChanged += OnSettingPropertyChanged;
     }
 
     #endregion
@@ -155,7 +157,7 @@ public partial class ShellViewModel : ViewModelBase, IWindowClosingAware
     [RelayCommand]
     private async Task OnOpenFileAsync()
     {
-        var path = await Dialog.ShowOpenFileDialog(libQB.Properties.Dialog.Common_OpenFile, "SMF|*.mid", Setting.LastOpenedFilePath);
+        var path = await Dialog.ShowOpenFileDialog(App.Text("OpenFile", "Open File"), "SMF|*.mid", Setting.LastOpenedFilePath);
 
         if (path == null)
         {
@@ -233,7 +235,18 @@ public partial class ShellViewModel : ViewModelBase, IWindowClosingAware
     [RelayCommand]
     private void OnShowDocument()
     {
-        string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources\Document\Manual\index.html");
+        var relativePath = Setting.Language switch
+        {
+            "ja-JP" => @"Resources\Document\Manual\ja\index.html",
+            "en-US" => @"Resources\Document\Manual\en\index.html",
+            _ => Path.Combine("Languages", Setting.Language, "Manual", "index.html")
+        };
+        string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath);
+
+        if (!File.Exists(path))
+        {
+            path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources\Document\Manual\en\index.html");
+        }
 
         if (!File.Exists(path))
         {
@@ -281,6 +294,18 @@ public partial class ShellViewModel : ViewModelBase, IWindowClosingAware
     private void OnUnloaded()
     {
         Navigation.Navigated -= OnNavigated;
+        Setting.PropertyChanged -= OnSettingPropertyChanged;
+    }
+
+    private void OnSettingPropertyChanged(object sender, PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName != nameof(ISettingService.Language)) return;
+
+        ((HamburgerMenuIconItem)MenuItems[0]).Label = App.Text("Title_SourceDataPage", "Source");
+        ((HamburgerMenuIconItem)MenuItems[1]).Label = App.Text("Title_ConvertedDataPage", "Converted");
+        ((HamburgerMenuIconItem)MenuItems[2]).Label = App.Text("Title_EventFilterPage", "Event Filter");
+        ((HamburgerMenuIconItem)MenuItems[3]).Label = App.Text("Title_ConvertSettingPage", "Convert Settings");
+        ((HamburgerMenuIconItem)OptionMenuItems[0]).Label = App.Text("SettingPageTitle", "Settings");
     }
 
     private void OnNavigated(object sender, string viewModelName)

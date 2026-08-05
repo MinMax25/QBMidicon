@@ -34,6 +34,11 @@ namespace QBMidicon
             return default;
         }
 
+        public static string Text(string key, string fallback = "")
+        {
+            return libQB.Localization.LocalizationManager.Instance[$"QBMidicon.Resources.{key}"] ?? fallback;
+        }
+
         private static IHost _host;
 
         public App()
@@ -45,6 +50,10 @@ namespace QBMidicon
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
             var appLocation = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+
+            libQB.Localization.LocalizationManager.Instance.RegisterResourceManager("QBMidicon.Resources", QBMidicon.Properties.Resources.ResourceManager);
+            libQB.Localization.LocalizationManager.Instance.Initialize(Path.Combine(appLocation, "Languages"));
+            RegisterDialogTexts();
 
             _host = Host.CreateDefaultBuilder(e.Args)
                     .ConfigureAppConfiguration(c =>
@@ -60,12 +69,25 @@ namespace QBMidicon
 
             if (!isNewInstance)
             {
-                MessageBox.Show(libQB.Properties.Dialog.Alert_DualBoot, appName, MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(App.Text("Alert_DualBoot", "The application is already running."), appName, MessageBoxButton.OK, MessageBoxImage.Warning);
                 Current.Shutdown();
                 return;
             }
 
             await _host.StartAsync();
+        }
+
+        private static void RegisterDialogTexts()
+        {
+            DialogTextProvider.OkButtonText = () => Text("Button_OK", "OK");
+            DialogTextProvider.CancelButtonText = () => Text("Button_Cancel", "Cancel");
+            DialogTextProvider.YesButtonText = () => Text("Button_Yes", "Yes");
+            DialogTextProvider.NoButtonText = () => Text("Button_No", "No");
+            DialogTextProvider.InformationTitle = () => Text("Title_Dialog_Information", "Information");
+            DialogTextProvider.WarningTitle = () => Text("Title_Dialog_Warning", "Warning");
+            DialogTextProvider.ErrorTitle = () => Text("Title_Dialog_Error", "Error");
+            DialogTextProvider.ConfirmTitle = () => Text("Title_Dialog_Confirm", "Confirm");
+            DialogTextProvider.ClearButtonTooltip = () => Text("Title_Command_Clear", "Clear");
         }
 
         private void ConfigureServices(HostBuilderContext context, IServiceCollection services)
@@ -85,6 +107,10 @@ namespace QBMidicon
             services.AddSingleton<IDialogService, DialogService>();
             services.AddSingleton<IWindowService, WindowService>();
             services.AddSingleton<IUndoManager, UndoManager>();
+
+            var settingFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Setting.toml");
+            services.AddSingleton<libQB.Settings.ISettingStore<AppSettings>>(
+                new libQB.Settings.TomlSettingStore<AppSettings>(settingFilePath));
 
             services.AddSingleton<MidiData>();
 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Convert Setting</title>
+<link href="content.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<h1>Convert Setting</h1>
+<p>Set various options related to conversion processing</p>
+<div class="image-wrapper">
+<img alt="QBMidiconの画面イメージ" src="image/ConvertSetting.png"/>
+</div>
+<div class="table-area">
+<table class="grid-table">
+<thead>
+<tr>
+<th>Category</th>
+<th>Item</th>
+<th>Value/Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<!-- Common -->
+<tr>
+<td rowspan="6">Common</td>
+<td>Channel Fix</td>
+<td>On/Off</td>
+<td>Fix the channel number of each track to 1 (the drum track will be 10)</td>
+</tr>
+<tr>
+<td>Insert Track Name</td>
+<td>On/Off</td>
+<td>Automatically inserts the track name (usually the instrument name)</td>
+</tr>
+<tr>
+<td>Remove Program Change</td>
+<td>On/Off</td>
+<td>Removes the program change event</td>
+</tr>
+<tr>
+<td>Replace Note On</td>
+<td>On/Off</td>
+<td>Replaces note-on events with velocity value 0 with note-off events</td>
+</tr>
+<tr>
+<td>Create Code Track</td>
+<td>On/Off</td>
+<td>Creates a track for code information</td>
+</tr>
+<tr>
+<td>Text Encoding</td>
+<td>UTF8 etc.</td>
+<td>Specifies the character encoding of text data</td>
+</tr>
+<!-- Lyric -->
+<tr>
+<td rowspan="2">Lyric</td>
+<td>Adjustment</td>
+<td>On/Off</td>
+<td>Adjust the timing of lyrics data, etc.</td>
+</tr>
+<tr>
+<td>Padding Plus</td>
+<td>On/Off</td>
+<td>Add padding (+) to the lyrics separation</td>
+</tr>
+<!-- SRT -->
+<tr>
+<td rowspan="2">SRT</td>
+<td>SRT Offset</td>
+<td>ms (e.g. -300)</td>
+<td>Sets display timing adjustment time for SRT subtitle data</td>
+</tr>
+<tr>
+<td>Remove Comment</td>
+<td>On/Off</td>
+<td>Removes comments in SRT data</td>
+</tr>
+<!-- XF Option -->
+<tr>
+<td>XF Option</td>
+<td>XFStyle Convert</td>
+<td>On/Off</td>
+<td>Converts extended data (codes, rehearsal marks) in case of XF format</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

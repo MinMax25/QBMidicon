@@ -7,6 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
     xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
+    xmlns:local="clr-namespace:QBMidicon.Class"
     xmlns:resLocal="clr-namespace:QBMidicon.Properties"
     Dialog:DialogParticipation.Register="{Binding}"
     mc:Ignorable="d"
@@ -20,7 +22,7 @@
 
         <StackPanel Grid.Row="0" Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Center" Orientation="Horizontal">
             <ContentControl IsTabStop="False" Content="{StaticResource SettingPageIcon}" Margin="8,2,0,0"/>
-            <TextBlock Style="{StaticResource PageTitleStyle}" Text="{x:Static resLocal:Resources.SettingPageTitle}"/>
+            <TextBlock Style="{StaticResource PageTitleStyle}" Text="{loc:Loc Key=QBMidicon.Resources.SettingPageTitle, Fallback={x:Static resLocal:Resources.SettingPageTitle}}"/>
         </StackPanel>
 
         <ScrollViewer Grid.Row="1" Margin="{StaticResource MediumLeftRightMargin}">
@@ -38,14 +40,14 @@
             </ScrollViewer.Resources>
             
             <StackPanel>
-                <GroupBox Header="Theme" Style="{StaticResource GroupBoxBaseStyle}">
+                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Setting_Theme, Fallback=Theme}" Style="{StaticResource GroupBoxBaseStyle}">
                     <DockPanel Margin="8" HorizontalAlignment="Center">
                         <StackPanel Orientation="Horizontal">
-                            <RadioButton Margin="4" Width="80" Content="Light" IsChecked="{Binding Setting.BaseTheme, ConverterParameter=Light, Converter={StaticResource BaseThemeConverter}}"/>
-                            <RadioButton Margin="4" Width="80" Content="Dark" IsChecked="{Binding Setting.BaseTheme, ConverterParameter=Dark, Converter={StaticResource BaseThemeConverter}}"/>
+                            <RadioButton Margin="4" Width="80" Content="{loc:Loc Key=QBMidicon.Resources.Setting_Light, Fallback=Light}" IsChecked="{Binding Setting.BaseTheme, ConverterParameter=Light, Converter={StaticResource BaseThemeConverter}}"/>
+                            <RadioButton Margin="4" Width="80" Content="{loc:Loc Key=QBMidicon.Resources.Setting_Dark, Fallback=Dark}" IsChecked="{Binding Setting.BaseTheme, ConverterParameter=Dark, Converter={StaticResource BaseThemeConverter}}"/>
                         </StackPanel>
                         <DockPanel>
-                            <Label Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{x:Static resLocal:Resources.SettingAccentColor}"/>
+                            <Label Width="110" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{loc:Loc Key=QBMidicon.Resources.SettingAccentColor, Fallback={x:Static resLocal:Resources.SettingAccentColor}}"/>
                             <ComboBox HorizontalAlignment="Left" Width="140" SelectedValue="{Binding Setting.ThemeColor}" ItemsSource="{Binding AccentColors}" SelectedValuePath="Key">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
@@ -58,8 +60,49 @@
                             </ComboBox>
                         </DockPanel>
                         <DockPanel>
-                            <Label Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{x:Static resLocal:Resources.SettingLanguage}"/>
-                            <ComboBox Width="120" SelectedValue="{Binding Setting.Language}" ItemsSource="{Binding Source={StaticResource LanguagesComboSource}}"/>
+                            <Label Width="100" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{loc:Loc Key=QBMidicon.Resources.SettingLanguage, Fallback={x:Static resLocal:Resources.SettingLanguage}}"/>
+                            <ComboBox Width="160" SelectedValue="{Binding Setting.Language}" SelectedValuePath="Code" ItemsSource="{Binding AvailableLanguages}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <StackPanel x:Name="LanguagePanel" Orientation="Horizontal">
+                                                <Image Width="20" Height="15" Source="{Binding Code, Converter={StaticResource FlagConverter}}" Margin="0,0,6,0"/>
+                                                <TextBlock Text="{Binding DisplayName}"/>
+                                            </StackPanel>
+                                            <StackPanel x:Name="HeaderPanel" Visibility="Collapsed">
+                                                <TextBlock Text="{Binding DisplayName}" FontWeight="Bold" FontSize="10" Opacity="0.7"/>
+                                                <Separator/>
+                                            </StackPanel>
+                                        </Grid>
+                                        <DataTemplate.Triggers>
+                                            <DataTrigger Binding="{Binding}" Value="{x:Static local:LanguageGroupHeaderItem.BuiltIn}">
+                                                <Setter TargetName="LanguagePanel" Property="Visibility" Value="Collapsed"/>
+                                                <Setter TargetName="HeaderPanel" Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding}" Value="{x:Static local:LanguageGroupHeaderItem.LanguagePacks}">
+                                                <Setter TargetName="LanguagePanel" Property="Visibility" Value="Collapsed"/>
+                                                <Setter TargetName="HeaderPanel" Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </DataTemplate.Triggers>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                                <ComboBox.ItemContainerStyle>
+                                    <Style TargetType="ComboBoxItem">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding}" Value="{x:Static local:LanguageGroupHeaderItem.BuiltIn}">
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                                <Setter Property="IsHitTestVisible" Value="False"/>
+                                                <Setter Property="Focusable" Value="False"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding}" Value="{x:Static local:LanguageGroupHeaderItem.LanguagePacks}">
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                                <Setter Property="IsHitTestVisible" Value="False"/>
+                                                <Setter Property="Focusable" Value="False"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ComboBox.ItemContainerStyle>
+                            </ComboBox>
                         </DockPanel>
                     </DockPanel>
                 </GroupBox>

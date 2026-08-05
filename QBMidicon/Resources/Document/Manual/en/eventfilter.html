@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Event Filter</title>
+<link href="content.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<h1>Event Filter</h1>
+<p>
+            Select the type of MIDI event to keep/exclude during conversion using the checkbox.<br/>
+            Only checked items will be included in the converted data.
+        </p>
+<div class="image-wrapper">
+<img alt="QBMidiconの画面イメージ" src="image/EventFilter.png"/>
+</div>
+<p>Category</p>
+<ul>
+<li>Meta: Meta event
+                <ul>
+<li>MIDI channel prefix, copyright notice, cue point, device name, instrument name, key setting, lyrics, marker, text, port specification, program name, sequence number, sequencer specific meta event, sequence name (song title)/track name, SMPTE offset, tempo, time signature setting, XF
+                        Items such as Style chord names, XF Style guide track flags, and XF Style rehearsal marks can be selected individually.</li>
+</ul>
+</li>
+<li>Channel Voice: Channel voice event
+                <ul>
+<li>Aftertouch, note off, note on, pitch bend, polyphonic key pressure, program change can be selected</li>
+</ul>
+</li>
+<li>SysEx: System exclusive event
+                <ul>
+<li>General, GM system off/on, GM2 system on, GS reset, GS rhythm part specification, XG system on can be selected</li>
+</ul>
+</li>
+<li>Control Change: Control change
+                <ul>
+<li>Bank MSB, Modulation, Breath, Foot Controller, Portamento Time, Data Entry
+                        You can individually select each CC number including MSB, Volume, Balance, Pan, and Expression</li>
+</ul>
+</li>
+</ul>
+<div class="note">
+            Unchecked items will not be output by Filtering.
+        </div>
+</div>
+</body>
+</html>

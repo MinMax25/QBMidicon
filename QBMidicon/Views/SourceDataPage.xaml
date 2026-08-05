@@ -6,6 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:resLocal="clr-namespace:QBMidicon.Properties"
+    xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
     xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:bh="http://schemas.microsoft.com/xaml/behaviors"
     xmlns:behaviors="clr-namespace:libQB.Behaviors;assembly=libQB"
@@ -22,7 +23,7 @@
             <TextBlock
                 Style="{StaticResource PageTitleStyle}"
                 Margin="{StaticResource MediumLeftMargin}"
-                Text="{x:Static resLocal:Resources.Title_SourceDataPage}" />
+                Text="{loc:Loc Key=QBMidicon.Resources.Title_SourceDataPage, Fallback={x:Static resLocal:Resources.Title_SourceDataPage}}" />
         </StackPanel>
         
         <Grid
@@ -34,7 +35,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <GroupBox Header="File Info" Style="{StaticResource GroupBoxBaseStyle}">
+                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Source_FileInfo, Fallback=File Info}" Style="{StaticResource GroupBoxBaseStyle}">
                     <GroupBox.Resources>
                         <Style TargetType="Label" BasedOn="{StaticResource MahApps.Styles.Label}">
                             <Setter Property="Width" Value="80"/>
@@ -45,24 +46,24 @@
                     </GroupBox.Resources>
                     <StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Path"/>
+                            <Label Content="{loc:Loc Key=QBMidicon.Resources.Source_Path, Fallback=Path}"/>
                             <TextBlock Grid.Column="0" Text="{Binding FilePath}"/>
-                            <Button Style="{StaticResource ButtonBaseStyle}" Margin="8,0,0,0" Content="Reload" Command="{Binding ReloadCommand}"/>
+                            <Button Style="{StaticResource ButtonBaseStyle}" Margin="8,0,0,0" Content="{loc:Loc Key=QBMidicon.Resources.Source_Reload, Fallback=Reload}" Command="{Binding ReloadCommand}"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Format"/>
+                            <Label Content="{loc:Loc Key=QBMidicon.Resources.Source_Format, Fallback=Format}"/>
                             <TextBlock Text="{Binding Format}"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Track Count"/>
+                            <Label Content="{loc:Loc Key=QBMidicon.Resources.Source_TrackCount, Fallback=Track Count}"/>
                             <TextBlock Text="{Binding NumberOfTracks}"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Division"/>
+                            <Label Content="{loc:Loc Key=QBMidicon.Resources.Source_Division, Fallback=Division}"/>
                             <TextBlock Text="{Binding Division}"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="MIDI Type"/>
+                            <Label Content="{loc:Loc Key=QBMidicon.Resources.Source_MidiType, Fallback=MIDI Type}"/>
                             <TextBlock Text="{Binding MidiStd}"/>
                         </StackPanel>
                     </StackPanel>
@@ -73,14 +74,14 @@
                             <TextBlock Text="{Binding}" FontSize="16"/>
                         </DataTemplate>
                     </TabControl.Resources>
-                    <TabItem Header="Tracks" HeaderTemplate="{StaticResource HeaderFontTemplate}">
+                    <TabItem Header="{loc:Loc Key=QBMidicon.Resources.Source_Tracks, Fallback=Tracks}" HeaderTemplate="{StaticResource HeaderFontTemplate}">
                         <DataGrid Style="{StaticResource DataGridStyle}" IsReadOnly="True" ItemsSource="{Binding Tracks}" SelectionMode="Single">
                             <bh:Interaction.Behaviors>
                                 <behaviors:DataGridExtendBehavior SelectedRow="{Binding SelectedTrack}"/>
                             </bh:Interaction.Behaviors>
                             <DataGrid.ContextMenu>
                                 <ContextMenu>
-                                    <MenuItem Header="Show Detail" Command="{Binding ShowTrackDetailCommand}"/>
+                                    <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Common_ShowDetail, Fallback=Show Detail}" Command="{Binding ShowTrackDetailCommand}"/>
                                 </ContextMenu>
                             </DataGrid.ContextMenu>
                             <DataGrid.Columns>
@@ -92,7 +93,7 @@
                                         </Style>
                                     </DataGridTextColumn.CellStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="300" Header="Track Name" Binding="{Binding}" IsReadOnly="True"/>
+                                <DataGridTextColumn Width="300" Header="{loc:Loc Key=QBMidicon.Resources.Common_TrackName, Fallback=Track Name}" Binding="{Binding}" IsReadOnly="True"/>
                                 <DataGridTextColumn Width="40" Header="CH" Binding="{Binding Channel}" IsReadOnly="True">
                                     <DataGridTextColumn.CellStyle>
                                         <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource MahApps.Styles.DataGridCell}">
@@ -101,7 +102,7 @@
                                         </Style>
                                     </DataGridTextColumn.CellStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Width="60" Header="Events" Binding="{Binding Events.Count, StringFormat=N0}" IsReadOnly="True">
+                                <DataGridTextColumn Width="60" Header="{loc:Loc Key=QBMidicon.Resources.Common_Events, Fallback=Events}" Binding="{Binding Events.Count, StringFormat=N0}" IsReadOnly="True">
                                     <DataGridTextColumn.CellStyle>
                                         <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource MahApps.Styles.DataGridCell}">
                                             <Setter Property="HorizontalAlignment" Value="Stretch" />
@@ -112,11 +113,11 @@
                             </DataGrid.Columns>
                         </DataGrid>
                     </TabItem>
-                    <TabItem Header="Tempo" HeaderTemplate="{StaticResource HeaderFontTemplate}">
+                    <TabItem Header="{loc:Loc Key=QBMidicon.Resources.Common_Tempo, Fallback=Tempo}" HeaderTemplate="{StaticResource HeaderFontTemplate}">
                         <DataGrid Style="{StaticResource DataGridStyle}" ItemsSource="{Binding Tempo}" IsReadOnly="True">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Measure" Binding="{Binding Converter={StaticResource BreakedTimeConverter}}"/>
-                                <DataGridTextColumn Header="Ticks" Binding="{Binding AbsoluteTick}">
+                                <DataGridTextColumn Header="{loc:Loc Key=QBMidicon.Resources.Common_Measure, Fallback=Measure}" Binding="{Binding Converter={StaticResource BreakedTimeConverter}}"/>
+                                <DataGridTextColumn Header="{loc:Loc Key=QBMidicon.Resources.Common_Ticks, Fallback=Ticks}" Binding="{Binding AbsoluteTick}">
                                     <DataGridTextColumn.CellStyle>
                                         <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource MahApps.Styles.DataGridCell}">
                                             <Setter Property="HorizontalAlignment" Value="Stretch" />
@@ -124,15 +125,15 @@
                                         </Style>
                                     </DataGridTextColumn.CellStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Header="Message" Binding="{Binding Converter={StaticResource MidiMessageConverter}}"/>
+                                <DataGridTextColumn Header="{loc:Loc Key=QBMidicon.Resources.Common_Message, Fallback=Message}" Binding="{Binding Converter={StaticResource MidiMessageConverter}}"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </TabItem>
-                    <TabItem Header="Key" HeaderTemplate="{StaticResource HeaderFontTemplate}">
+                    <TabItem Header="{loc:Loc Key=QBMidicon.Resources.Common_Key, Fallback=Key}" HeaderTemplate="{StaticResource HeaderFontTemplate}">
                         <DataGrid Style="{StaticResource DataGridStyle}" ItemsSource="{Binding Key}" IsReadOnly="True">
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Measure" Binding="{Binding Converter={StaticResource BreakedTimeConverter}}"/>
-                                <DataGridTextColumn Header="Ticks" Binding="{Binding AbsoluteTick}">
+                                <DataGridTextColumn Header="{loc:Loc Key=QBMidicon.Resources.Common_Measure, Fallback=Measure}" Binding="{Binding Converter={StaticResource BreakedTimeConverter}}"/>
+                                <DataGridTextColumn Header="{loc:Loc Key=QBMidicon.Resources.Common_Ticks, Fallback=Ticks}" Binding="{Binding AbsoluteTick}">
                                     <DataGridTextColumn.CellStyle>
                                         <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource MahApps.Styles.DataGridCell}">
                                             <Setter Property="HorizontalAlignment" Value="Stretch" />
@@ -140,16 +141,16 @@
                                         </Style>
                                     </DataGridTextColumn.CellStyle>
                                 </DataGridTextColumn>
-                                <DataGridTextColumn Header="Message" Binding="{Binding Converter={StaticResource MidiMessageConverter}}"/>
+                                <DataGridTextColumn Header="{loc:Loc Key=QBMidicon.Resources.Common_Message, Fallback=Message}" Binding="{Binding Converter={StaticResource MidiMessageConverter}}"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </TabItem>
-                    <TabItem Header="Lyric" HeaderTemplate="{StaticResource HeaderFontTemplate}">
+                    <TabItem Header="{loc:Loc Key=QBMidicon.Resources.Common_Lyric, Fallback=Lyric}" HeaderTemplate="{StaticResource HeaderFontTemplate}">
                         <ScrollViewer>
                             <TextBlock Text="{Binding Lyric}"/>
                         </ScrollViewer>
                     </TabItem>
-                    <TabItem Header="SRT" HeaderTemplate="{StaticResource HeaderFontTemplate}">
+                    <TabItem Header="{loc:Loc Key=QBMidicon.Resources.Common_SRT, Fallback=SRT}" HeaderTemplate="{StaticResource HeaderFontTemplate}">
                         <ScrollViewer>
                             <TextBlock Text="{Binding SRT}"/>
                         </ScrollViewer>

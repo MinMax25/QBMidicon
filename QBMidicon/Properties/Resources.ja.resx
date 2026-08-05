@@ -234,4 +234,81 @@
   <data name="Title_ConvertSettingPage" xml:space="preserve">
     <value>コンバート設定</value>
   </data>
+  <data name="Alert_DualBoot" xml:space="preserve"><value>アプリケーションは既に起動しています。</value></data>
+  <data name="BuiltInLanguages" xml:space="preserve"><value>組み込み言語</value></data>
+  <data name="LanguagePacks" xml:space="preserve"><value>言語パック</value></data>
+  <data name="Button_OK" xml:space="preserve"><value>OK</value></data>
+  <data name="Button_Cancel" xml:space="preserve"><value>キャンセル</value></data>
+  <data name="Button_Yes" xml:space="preserve"><value>はい</value></data>
+  <data name="Button_No" xml:space="preserve"><value>いいえ</value></data>
+  <data name="Title_Dialog_Information" xml:space="preserve"><value>情報</value></data>
+  <data name="Title_Dialog_Warning" xml:space="preserve"><value>警告</value></data>
+  <data name="Title_Dialog_Error" xml:space="preserve"><value>エラー</value></data>
+  <data name="Title_Dialog_Confirm" xml:space="preserve"><value>確認</value></data>
+  <data name="Title_Command_Clear" xml:space="preserve"><value>クリア</value></data>
+  <data name="Menu_File" xml:space="preserve"><value>ファイル (_F)</value></data>
+  <data name="Menu_File_Open" xml:space="preserve"><value>開く (_O)</value></data>
+  <data name="Menu_File_Save" xml:space="preserve"><value>保存 (_S)</value></data>
+  <data name="Menu_File_Close" xml:space="preserve"><value>終了 (_X)</value></data>
+  <data name="Menu_Help" xml:space="preserve"><value>ヘルプ (_H)</value></data>
+  <data name="Menu_Help_Document" xml:space="preserve"><value>操作ガイド</value></data>
+  <data name="Menu_Help_About" xml:space="preserve"><value>QBMidiconについて</value></data>
+  <data name="Common_Common" xml:space="preserve"><value>共通</value></data>
+  <data name="Common_Meta" xml:space="preserve"><value>メタイベント</value></data>
+  <data name="Common_ChannelVoice" xml:space="preserve"><value>チャンネルボイス</value></data>
+  <data name="Common_SysEx" xml:space="preserve"><value>システムエクスクルーシブ</value></data>
+  <data name="Common_ControlChange" xml:space="preserve"><value>コントロールチェンジ</value></data>
+  <data name="Common_Lyric" xml:space="preserve"><value>歌詞</value></data>
+  <data name="Common_SRT" xml:space="preserve"><value>SRT</value></data>
+  <data name="Common_ShowDetail" xml:space="preserve"><value>詳細を表示</value></data>
+  <data name="Common_TrackName" xml:space="preserve"><value>トラック名</value></data>
+  <data name="Common_Events" xml:space="preserve"><value>イベント数</value></data>
+  <data name="Common_Measure" xml:space="preserve"><value>小節</value></data>
+  <data name="Common_Ticks" xml:space="preserve"><value>ティック</value></data>
+  <data name="Common_Message" xml:space="preserve"><value>メッセージ</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Convert_ChannelFix" xml:space="preserve"><value>チャンネルを固定</value></data>
+  <data name="Convert_InsertTrackName" xml:space="preserve"><value>トラック名を挿入</value></data>
+  <data name="Convert_RemoveProgramChange" xml:space="preserve"><value>プログラムチェンジを削除</value></data>
+  <data name="Convert_ReplaceNoteOn" xml:space="preserve"><value>ノートオンを置換</value></data>
+  <data name="Convert_CreateCodeTrack" xml:space="preserve"><value>コードトラックを作成</value></data>
+  <data name="Convert_TextEncoding" xml:space="preserve"><value>文字コード</value></data>
+  <data name="Convert_Adjustment" xml:space="preserve"><value>補正</value></data>
+  <data name="Convert_PaddingPlus" xml:space="preserve"><value>余白を追加</value></data>
+  <data name="Convert_SRTOffset" xml:space="preserve"><value>SRTオフセット</value></data>
+  <data name="Convert_RemoveComment" xml:space="preserve"><value>コメントを削除</value></data>
+  <data name="Convert_XFOption" xml:space="preserve"><value>XFオプション</value></data>
+  <data name="Convert_XFStyleConvert" xml:space="preserve"><value>XFスタイルを変換</value></data>
+  <data name="Source_FileInfo" xml:space="preserve"><value>ファイル情報</value></data>
+  <data name="Source_Path" xml:space="preserve"><value>パス</value></data>
+  <data name="Source_Reload" xml:space="preserve"><value>再読み込み</value></data>
+  <data name="Source_Format" xml:space="preserve"><value>フォーマット</value></data>
+  <data name="Source_TrackCount" xml:space="preserve"><value>トラック数</value></data>
+  <data name="Source_Division" xml:space="preserve"><value>分解能</value></data>
+  <data name="Source_MidiType" xml:space="preserve"><value>MIDIタイプ</value></data>
+  <data name="Source_Tracks" xml:space="preserve"><value>トラック</value></data>
+  <data name="Converted_Drum" xml:space="preserve"><value>ドラム</value></data>
+  <data name="Converted_LyricPercent" xml:space="preserve"><value>歌詞率</value></data>
+  <data name="Converted_NoteRange" xml:space="preserve"><value>音域</value></data>
+  <data name="Converted_Transpose" xml:space="preserve"><value>トランスポーズ</value></data>
+  <data name="Save_Folder" xml:space="preserve"><value>保存先</value></data>
+  <data name="Save_FolderPath" xml:space="preserve"><value>フォルダーパス</value></data>
+  <data name="Save_Files" xml:space="preserve"><value>保存するファイル</value></data>
+  <data name="Save_FileNamePrefix" xml:space="preserve"><value>ファイル名の接頭辞</value></data>
+  <data name="Save_RawData" xml:space="preserve"><value>生データ</value></data>
+  <data name="Save_FilteredData" xml:space="preserve"><value>フィルター済みデータ</value></data>
+  <data name="Save_LyricTrackData" xml:space="preserve"><value>歌詞トラックデータ</value></data>
+  <data name="Save_LyricTextData" xml:space="preserve"><value>歌詞テキストデータ</value></data>
+  <data name="Save_LyricSrtData" xml:space="preserve"><value>歌詞SRTデータ</value></data>
+  <data name="Track_Filter" xml:space="preserve"><value>フィルター</value></data>
+  <data name="Track_FilterOff" xml:space="preserve"><value>フィルター無効</value></data>
+  <data name="Track_FilterOn" xml:space="preserve"><value>フィルター有効</value></data>
+  <data name="Track_UncheckAll" xml:space="preserve"><value>すべて解除</value></data>
+  <data name="Track_ResetDefault" xml:space="preserve"><value>既定値に戻す</value></data>
+  <data name="Setting_Theme" xml:space="preserve"><value>テーマ</value></data>
+  <data name="Setting_Light" xml:space="preserve"><value>ライト</value></data>
+  <data name="Setting_Dark" xml:space="preserve"><value>ダーク</value></data>
+  <data name="Common_Tempo" xml:space="preserve"><value>テンポ</value></data>
+  <data name="Common_Key" xml:space="preserve"><value>キー</value></data>
+  <data name="Common_License" xml:space="preserve"><value>ライセンス</value></data>
 </root>

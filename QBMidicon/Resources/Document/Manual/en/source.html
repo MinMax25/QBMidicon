@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Source</title>
+<link href="content.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<h1>Source</h1>
+<p>Displays the information and track list of the loaded SMF file</p>
+<div class="image-wrapper">
+<div class="image-area">
+<img alt="QBMidiconの画面イメージ" src="image/Source.png"/>
+</div>
+</div>
+<p>Screen item</p>
+<ul>
+<li>File Info: Basic information of the loaded file
+                <ul>
+<li>Path: Displays the path of the loaded file</li>
+<li>Reload: Reload the file</li>
+<li>Format: Displays the SMF format (Format0, etc.)</li>
+<li>Track Count: Displays the number of tracks</li>
+<li>Division: Displays the time base (resolution)</li>
+<li>MIDI Type: Displays the type of MIDI file (XG, etc.)</li>
+</ul>
+</li>
+<li>Tab switching
+                <ul>
+<li>Tracks: Track list (No / Track Name / CH / Events)</li>
+<li>Tempo: Displays tempo information</li>
+<li>Key: Displays key information</li>
+<li>Lyric: Displays lyrics data</li>
+<li>SRT: Displays subtitle (SRT) data</li>
+</ul>
+</li>
+</ul>
+<h2>Tracks tab</h2>
+<p>Displays a list of each track in the loaded SMF</p>
+<div class="image-wrapper">
+<div class="image-area">
+<img alt="QBMidiconの画面イメージ" src="image/SourceTracks.png"/>
+</div>
+</div>
+<div class="table-area">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No</td>
+<td>track number</td>
+</tr>
+<tr>
+<td>Track Name</td>
+<td>Track name</td>
+</tr>
+<tr>
+<td>CH</td>
+<td>MIDI channel</td>
+</tr>
+<tr>
+<td>Events</td>
+<td>Number of events in the track</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note">
+            Select a row and right-click to display the details of the events for that track (see "Display track information details" for details).
+        </div>
+<h2>Tempo tab</h2>
+<p>Lists tempo change events in the file</p>
+<div class="image-wrapper">
+<div class="image-area">
+<img alt="QBMidiconの画面イメージ" src="image/SourceTempo.png"/>
+</div>
+</div>
+<div class="table-area">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure</td>
+<td>Event position (bars:beats:ticks)</td>
+</tr>
+<tr>
+<td>Ticks</td>
+<td>Event position (absolute value in ticks)</td>
+</tr>
+<tr>
+<td>Message</td>
+<td>Contents of tempo change (e.g. Tempo bpm=100.00)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>Key tab</h2>
+<p>Displays a list of key setting events in the file</p>
+<div class="image-wrapper">
+<div class="image-area">
+<img alt="QBMidiconの画面イメージ" src="image/SourceKey.png"/>
+</div>
+</div>
+<div class="table-area">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure</td>
+<td>Event position (measure: beat: tick)</td>
+</tr>
+<tr>
+<td>Ticks</td>
+<td>Event position (absolute value in ticks)</td>
+</tr>
+<tr>
+<td>Message</td>
+<td>Key settings (e.g. KeySignature B minor)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>Lyric tab</h2>
+<p>Displays lyric events in the file as text</p>
+<div class="image-wrapper">
+<div class="image-area">
+<img alt="QBMidiconの画面イメージ" src="image/SourceLyric.png"/>
+</div>
+</div>
+<h2>SRT tab</h2>
+<p>Displays lyrics data as text with time code in subtitle (SRT) format</p>
+<div class="image-wrapper">
+<div class="image-area">
+<img alt="QBMidiconの画面イメージ" src="image/SourceSRT.png"/>
+</div>
+</div>
+<ul>
+<li>The number at the beginning of each block is the serial number of the subtitle.</li>
+<li>The second line is the display start time --&gt; end time (hours: minutes: seconds, milliseconds)</li>
+<li>The third and subsequent lines are the lyrics text that will actually be displayed.</li>
+</ul>
+</div>
+</body>
+</html>

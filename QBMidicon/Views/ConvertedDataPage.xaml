@@ -6,6 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:resLocal="clr-namespace:QBMidicon.Properties"
+    xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
     xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:bh="http://schemas.microsoft.com/xaml/behaviors"
     xmlns:behaviors="clr-namespace:libQB.Behaviors;assembly=libQB"
@@ -31,7 +32,7 @@
             <TextBlock
                 Style="{StaticResource PageTitleStyle}"
                 Margin="{StaticResource MediumLeftMargin}"
-                Text="{x:Static resLocal:Resources.Title_ConvertedDataPage}" />
+                Text="{loc:Loc Key=QBMidicon.Resources.Title_ConvertedDataPage, Fallback={x:Static resLocal:Resources.Title_ConvertedDataPage}}" />
         </StackPanel>
         <Grid
             Grid.Row="1"
@@ -48,7 +49,7 @@
                 <DataGrid.ContextMenu>
                     <ContextMenu>
                         <MenuItem
-                            Header="Show Detail"
+                            Header="{loc:Loc Key=QBMidicon.Resources.Common_ShowDetail, Fallback=Show Detail}"
                             Command="{Binding ShowTrackDetailCommand}" />
                     </ContextMenu>
                 </DataGrid.ContextMenu>
@@ -73,7 +74,7 @@
                     </DataGridTextColumn>
                     <DataGridTextColumn
                         Width="300"
-                        Header="Track Name"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Common_TrackName, Fallback=Track Name}"
                         Binding="{Binding TrackName}"
                         IsReadOnly="True" />
                     <DataGridTextColumn
@@ -132,7 +133,7 @@
                     </DataGridTextColumn>
                     <DataGridTextColumn
                         Width="60"
-                        Header="Events"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Common_Events, Fallback=Events}"
                         Binding="{Binding EventCount, StringFormat=N0}"
                         IsReadOnly="True">
                         <DataGridTextColumn.CellStyle>
@@ -150,12 +151,12 @@
                     </DataGridTextColumn>
                     <DataGridCheckBoxColumn
                         Width="60"
-                        Header="Drum"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_Drum, Fallback=Drum}"
                         Binding="{Binding IsDrum, Mode=OneWay}"
                         IsReadOnly="True" />
                     <DataGridTextColumn
                         Width="60"
-                        Header="Lyric %"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_LyricPercent, Fallback=Lyric %}"
                         Binding="{Binding LyricMatchRatio, StringFormat=0.0}"
                         IsReadOnly="True">
                         <DataGridTextColumn.CellStyle>
@@ -173,12 +174,12 @@
                     </DataGridTextColumn>
                     <DataGridCheckBoxColumn
                         Width="60"
-                        Header="Lyric"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Common_Lyric, Fallback=Lyric}"
                         Binding="{Binding LyricMatched}"
                         IsReadOnly="True" />
                     <DataGridTextColumn
                         Width="80"
-                        Header="Note Range"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_NoteRange, Fallback=Note Range}"
                         Binding="{Binding Converter={StaticResource PitchRangeConverter}}"
                         IsReadOnly="True">
                         <DataGridTextColumn.CellStyle>
@@ -193,7 +194,7 @@
                     </DataGridTextColumn>
                     <DataGridTemplateColumn
                         Width="90"
-                        Header="Transpose"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_Transpose, Fallback=Transpose}"
                         IsReadOnly="False">
                         <!-- 表示用 -->
                         <DataGridTemplateColumn.CellTemplate>

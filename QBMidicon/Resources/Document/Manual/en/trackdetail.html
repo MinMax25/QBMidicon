@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Display detailed track information</title>
+<link href="content.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+<h1>Display detailed track information</h1>
+<p>
+            This window displays a list of individual MIDI events in the<br/>
+            track, which can be displayed by selecting the relevant line in the Source or Converted track list and using the right-click menu.
+        </p>
+<div class="note">
+            Select the target track row on the Source or Converted screen and right-click → open from the context menu.
+        </div>
+<div class="image-wrapper">
+<img alt="QBMidiconの画面イメージ" src="image/TrackDetail.png"/>
+</div>
+<p>Screen configuration</p>
+<div class="contextmenu-wrapper">
+<div class="table-area">
+<table>
+<thead>
+<tr>
+<th>area</th>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3">Left: Filter / Lyric</td>
+<td>Filter Off</td>
+<td>Displays all events in the track without applying a filter</td>
+</tr>
+<tr>
+<td>Filter On</td>
+<td>Displays only the event type selected on the right</td>
+</tr>
+<tr>
+<td>Lyric</td>
+<td>Rather than switching display modes, this function assigns and inserts lyrics events into MIDI data (notes) of a track if there are lyrics events in the file</td>
+</tr>
+<tr>
+<td rowspan="4">Right side: Filter (event type selection)</td>
+<td>META</td>
+<td>Select whether to display or hide meta events by type</td>
+</tr>
+<tr>
+<td>CHANNEL VOICE</td>
+<td>Selects aftertouch, note on/off, pitch bend, etc.</td>
+</tr>
+<tr>
+<td>SYSEX</td>
+<td>Selects system exclusive event</td>
+</tr>
+<tr>
+<td>CONTROL CHANGE</td>
+<td>Bank Select each control change such as MSB, Modulation, Volume, etc.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Event list item</p>
+<div class="table-area">
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No.</td>
+<td>Event serial number</td>
+</tr>
+<tr>
+<td>Measure</td>
+<td>Event position (measures: beats: ticks)</td>
+</tr>
+<tr>
+<td>Ticks</td>
+<td>Event position (absolute value in ticks)</td>
+</tr>
+<tr>
+<td>CH</td>
+<td>MIDI channel</td>
+</tr>
+<tr>
+<td>Message</td>
+<td>Event content (e.g. ControlChange BankMSB 0, NoteOn Note A2 (57) Velocity 70 etc.)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note">
+            The filter settings on this screen are for display purposes only and do not affect the Event Filter (conversion settings). If you actually want to exclude it from the conversion results, please change the settings on the Event Filter page.
+        </div>
+</div>
+</body>
+</html>

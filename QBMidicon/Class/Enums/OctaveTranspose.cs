@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
-using libQB.ValueConverters;
+using QBMidicon.Class.ValueConverters;
 
 namespace QBMidicon.Class.Enums;
 

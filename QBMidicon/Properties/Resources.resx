@@ -234,4 +234,81 @@
   <data name="Title_ConvertSettingPage" xml:space="preserve">
     <value>Convert Setting</value>
   </data>
+  <data name="Alert_DualBoot" xml:space="preserve"><value>The application is already running.</value></data>
+  <data name="BuiltInLanguages" xml:space="preserve"><value>Built-in languages</value></data>
+  <data name="LanguagePacks" xml:space="preserve"><value>Language packs</value></data>
+  <data name="Button_OK" xml:space="preserve"><value>OK</value></data>
+  <data name="Button_Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Button_Yes" xml:space="preserve"><value>Yes</value></data>
+  <data name="Button_No" xml:space="preserve"><value>No</value></data>
+  <data name="Title_Dialog_Information" xml:space="preserve"><value>Information</value></data>
+  <data name="Title_Dialog_Warning" xml:space="preserve"><value>Warning</value></data>
+  <data name="Title_Dialog_Error" xml:space="preserve"><value>Error</value></data>
+  <data name="Title_Dialog_Confirm" xml:space="preserve"><value>Confirm</value></data>
+  <data name="Title_Command_Clear" xml:space="preserve"><value>Clear</value></data>
+  <data name="Menu_File" xml:space="preserve"><value>File (_F)</value></data>
+  <data name="Menu_File_Open" xml:space="preserve"><value>Open (_O)</value></data>
+  <data name="Menu_File_Save" xml:space="preserve"><value>Save (_S)</value></data>
+  <data name="Menu_File_Close" xml:space="preserve"><value>Close (_X)</value></data>
+  <data name="Menu_Help" xml:space="preserve"><value>Help (_H)</value></data>
+  <data name="Menu_Help_Document" xml:space="preserve"><value>Documentation</value></data>
+  <data name="Menu_Help_About" xml:space="preserve"><value>About QBMidicon</value></data>
+  <data name="Common_Common" xml:space="preserve"><value>Common</value></data>
+  <data name="Common_Meta" xml:space="preserve"><value>Meta</value></data>
+  <data name="Common_ChannelVoice" xml:space="preserve"><value>Channel Voice</value></data>
+  <data name="Common_SysEx" xml:space="preserve"><value>SysEx</value></data>
+  <data name="Common_ControlChange" xml:space="preserve"><value>Control Change</value></data>
+  <data name="Common_Lyric" xml:space="preserve"><value>Lyric</value></data>
+  <data name="Common_SRT" xml:space="preserve"><value>SRT</value></data>
+  <data name="Common_ShowDetail" xml:space="preserve"><value>Show Detail</value></data>
+  <data name="Common_TrackName" xml:space="preserve"><value>Track Name</value></data>
+  <data name="Common_Events" xml:space="preserve"><value>Events</value></data>
+  <data name="Common_Measure" xml:space="preserve"><value>Measure</value></data>
+  <data name="Common_Ticks" xml:space="preserve"><value>Ticks</value></data>
+  <data name="Common_Message" xml:space="preserve"><value>Message</value></data>
+  <data name="Common_Save" xml:space="preserve"><value>Save</value></data>
+  <data name="Convert_ChannelFix" xml:space="preserve"><value>Channel Fix</value></data>
+  <data name="Convert_InsertTrackName" xml:space="preserve"><value>Insert Track Name</value></data>
+  <data name="Convert_RemoveProgramChange" xml:space="preserve"><value>Remove Program Change</value></data>
+  <data name="Convert_ReplaceNoteOn" xml:space="preserve"><value>Replace Note On</value></data>
+  <data name="Convert_CreateCodeTrack" xml:space="preserve"><value>Create Code Track</value></data>
+  <data name="Convert_TextEncoding" xml:space="preserve"><value>Text Encoding</value></data>
+  <data name="Convert_Adjustment" xml:space="preserve"><value>Adjustment</value></data>
+  <data name="Convert_PaddingPlus" xml:space="preserve"><value>Padding Plus</value></data>
+  <data name="Convert_SRTOffset" xml:space="preserve"><value>SRT Offset</value></data>
+  <data name="Convert_RemoveComment" xml:space="preserve"><value>Remove Comment</value></data>
+  <data name="Convert_XFOption" xml:space="preserve"><value>XF Option</value></data>
+  <data name="Convert_XFStyleConvert" xml:space="preserve"><value>XFStyle Convert</value></data>
+  <data name="Source_FileInfo" xml:space="preserve"><value>File Info</value></data>
+  <data name="Source_Path" xml:space="preserve"><value>Path</value></data>
+  <data name="Source_Reload" xml:space="preserve"><value>Reload</value></data>
+  <data name="Source_Format" xml:space="preserve"><value>Format</value></data>
+  <data name="Source_TrackCount" xml:space="preserve"><value>Track Count</value></data>
+  <data name="Source_Division" xml:space="preserve"><value>Division</value></data>
+  <data name="Source_MidiType" xml:space="preserve"><value>MIDI Type</value></data>
+  <data name="Source_Tracks" xml:space="preserve"><value>Tracks</value></data>
+  <data name="Converted_Drum" xml:space="preserve"><value>Drum</value></data>
+  <data name="Converted_LyricPercent" xml:space="preserve"><value>Lyric %</value></data>
+  <data name="Converted_NoteRange" xml:space="preserve"><value>Note Range</value></data>
+  <data name="Converted_Transpose" xml:space="preserve"><value>Transpose</value></data>
+  <data name="Save_Folder" xml:space="preserve"><value>Save Folder</value></data>
+  <data name="Save_FolderPath" xml:space="preserve"><value>Folder Path</value></data>
+  <data name="Save_Files" xml:space="preserve"><value>Files to save</value></data>
+  <data name="Save_FileNamePrefix" xml:space="preserve"><value>File Name Prefix</value></data>
+  <data name="Save_RawData" xml:space="preserve"><value>Raw Data</value></data>
+  <data name="Save_FilteredData" xml:space="preserve"><value>Filtered Data</value></data>
+  <data name="Save_LyricTrackData" xml:space="preserve"><value>Lyric Track Data</value></data>
+  <data name="Save_LyricTextData" xml:space="preserve"><value>Lyric Text Data</value></data>
+  <data name="Save_LyricSrtData" xml:space="preserve"><value>Lyric SRT Data</value></data>
+  <data name="Track_Filter" xml:space="preserve"><value>Filter</value></data>
+  <data name="Track_FilterOff" xml:space="preserve"><value>Filter Off</value></data>
+  <data name="Track_FilterOn" xml:space="preserve"><value>Filter On</value></data>
+  <data name="Track_UncheckAll" xml:space="preserve"><value>Uncheck All</value></data>
+  <data name="Track_ResetDefault" xml:space="preserve"><value>Reset Default</value></data>
+  <data name="Setting_Theme" xml:space="preserve"><value>Theme</value></data>
+  <data name="Setting_Light" xml:space="preserve"><value>Light</value></data>
+  <data name="Setting_Dark" xml:space="preserve"><value>Dark</value></data>
+  <data name="Common_Tempo" xml:space="preserve"><value>Tempo</value></data>
+  <data name="Common_Key" xml:space="preserve"><value>Key</value></data>
+  <data name="Common_License" xml:space="preserve"><value>License</value></data>
 </root>

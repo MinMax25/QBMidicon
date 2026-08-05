@@ -1,0 +1,204 @@
+/* ======================================================
+   全体・カード・背景・文字
+====================================================== */
+body {
+    font-family: "Yu Gothic", "游ゴシック体", "メイリオ", sans-serif;
+    background-color: #2b2b2b;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #3c3c3c;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+/* ======================================================
+   見出し・テキスト
+====================================================== */
+h1 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+    h1::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #888888;
+        margin-top: 10px;
+        border-radius: 2px;
+    }
+
+h2 {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 10px 0 5px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+    h2::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #888888;
+        margin-top: 3px;
+        border-radius: 2px;
+    }
+
+p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.sub-text {
+    font-size: 0.95em;
+    color: #bbbbbb;
+    margin-top: 4px;
+}
+
+a {
+    color: #dddddd;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+/* ======================================================
+   リスト（縦線付きカード風）
+====================================================== */
+ul > li {
+    list-style: none;
+    margin-bottom: 8px;
+    padding: 2px 12px;
+    background-color: #3c3c3c;
+    border-left: 4px solid #888888;
+    border-radius: 4px;
+}
+
+ul li li {
+    border-left: none;
+    padding-left: 12px;
+}
+
+/* ======================================================
+   画像＋表 レイアウト
+====================================================== */
+.image-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.image-area img {
+    max-width: 400px;
+    height: auto;
+}
+
+/* ======================================================
+   テーブル
+====================================================== */
+.table-area table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+/* 罫線を明確に */
+.table-area th,
+.table-area td {
+    border: 1px solid #777;
+    padding: 6px 10px;
+}
+
+/* ヘッダ */
+.table-area th {
+    background-color: #444444;
+    color: #ffffff;
+    text-align: left;
+}
+
+/* 行の視認性アップ（うっすら） */
+.table-area tbody tr:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+/* ======================================================
+   単体画像
+====================================================== */
+.image-wrapper img,
+.contextmenu-image img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ======================================================
+   コンテクストメニュー
+====================================================== */
+.contextmenu-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contextmenu-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* ======================================================
+   注意・補足
+====================================================== */
+.note {
+    font-size: 0.9em;
+    color: #bbbbbb;
+    background-color: #2a2a2a;
+    padding: 8px 12px;
+    margin: 10px 0;
+    border-left: 4px solid #888888;
+    border-radius: 4px;
+}
+
+/* ======================================================
+   レスポンシブ
+====================================================== */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .image-wrapper,
+    .contextmenu-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
