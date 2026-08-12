@@ -5,7 +5,9 @@ VisualStudioVersion = 18.2.11408.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QBMidicon", "QBMidicon\QBMidicon.csproj", "{70E9336C-FADB-475B-9E3C-64D00A222F61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libQB", "..\..\lib\libQB\libQB.csproj", "{38B5B38B-0844-5CD5-9408-BEDE20F686A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libQB", "..\lib\libQB\libQB.csproj", "{F66B1979-6A6E-4E0C-7DE9-892F2A0EAB75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libMidi", "..\lib\libMidi\libMidi.csproj", "{D763B4FC-7FEF-689A-FD3A-8C253CF81F95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,14 +25,22 @@ Global
 		{70E9336C-FADB-475B-9E3C-64D00A222F61}.Release|Any CPU.Build.0 = Release|Any CPU
 		{70E9336C-FADB-475B-9E3C-64D00A222F61}.Release|x64.ActiveCfg = Release|x64
 		{70E9336C-FADB-475B-9E3C-64D00A222F61}.Release|x64.Build.0 = Release|x64
-		{38B5B38B-0844-5CD5-9408-BEDE20F686A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38B5B38B-0844-5CD5-9408-BEDE20F686A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38B5B38B-0844-5CD5-9408-BEDE20F686A8}.Debug|x64.ActiveCfg = Debug|x64
-		{38B5B38B-0844-5CD5-9408-BEDE20F686A8}.Debug|x64.Build.0 = Debug|x64
-		{38B5B38B-0844-5CD5-9408-BEDE20F686A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38B5B38B-0844-5CD5-9408-BEDE20F686A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38B5B38B-0844-5CD5-9408-BEDE20F686A8}.Release|x64.ActiveCfg = Release|x64
-		{38B5B38B-0844-5CD5-9408-BEDE20F686A8}.Release|x64.Build.0 = Release|x64
+		{F66B1979-6A6E-4E0C-7DE9-892F2A0EAB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66B1979-6A6E-4E0C-7DE9-892F2A0EAB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66B1979-6A6E-4E0C-7DE9-892F2A0EAB75}.Debug|x64.ActiveCfg = Debug|x64
+		{F66B1979-6A6E-4E0C-7DE9-892F2A0EAB75}.Debug|x64.Build.0 = Debug|x64
+		{F66B1979-6A6E-4E0C-7DE9-892F2A0EAB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66B1979-6A6E-4E0C-7DE9-892F2A0EAB75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F66B1979-6A6E-4E0C-7DE9-892F2A0EAB75}.Release|x64.ActiveCfg = Release|x64
+		{F66B1979-6A6E-4E0C-7DE9-892F2A0EAB75}.Release|x64.Build.0 = Release|x64
+		{D763B4FC-7FEF-689A-FD3A-8C253CF81F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D763B4FC-7FEF-689A-FD3A-8C253CF81F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D763B4FC-7FEF-689A-FD3A-8C253CF81F95}.Debug|x64.ActiveCfg = Debug|x64
+		{D763B4FC-7FEF-689A-FD3A-8C253CF81F95}.Debug|x64.Build.0 = Debug|x64
+		{D763B4FC-7FEF-689A-FD3A-8C253CF81F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D763B4FC-7FEF-689A-FD3A-8C253CF81F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D763B4FC-7FEF-689A-FD3A-8C253CF81F95}.Release|x64.ActiveCfg = Release|x64
+		{D763B4FC-7FEF-689A-FD3A-8C253CF81F95}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
