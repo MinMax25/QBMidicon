@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
     xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+    xmlns:p="clr-namespace:QBMidicon"
     xmlns:properties="clr-namespace:QBMidicon"
     Style="{StaticResource CustomMetroWindow}"
     Dialog:DialogParticipation.Register="{Binding}"
@@ -17,7 +18,7 @@
     Icon="/Resources/QB.ico"
     Width="1100"
     Height="700"
-    Title="{x:Static properties:Resources.AppDisplayName}">
+    Title="{x:Static p:Resources.AppDisplayName}">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -31,7 +32,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
-            <GroupBox Grid.Row="0" Style="{StaticResource GroupBoxBaseStyle}" Header="{loc:Loc Key=QBMidicon.Resources.Track_Filter}">
+            <GroupBox Grid.Row="0" Style="{StaticResource GroupBoxBaseStyle}" Header="{loc:Loc Key={x:Static p:Resources.Track_Filter}}">
                 <GroupBox.Resources>
                     <Style TargetType="CheckBox" BasedOn="{StaticResource MahApps.Styles.CheckBox}">
                         <Setter Property="Margin" Value="4"/>
@@ -46,9 +47,9 @@
                             <Setter Property="GroupName" Value="Filter"/>
                         </Style>
                     </StackPanel.Resources>
-                    <RadioButton Content="{loc:Loc Key=QBMidicon.Resources.Track_FilterOff}" IsChecked="{Binding FilterOff}"/>
-                    <RadioButton Content="{loc:Loc Key=QBMidicon.Resources.Track_FilterOn}" IsChecked="{Binding FilterOn}"/>
-                    <RadioButton Content="{loc:Loc Key=QBMidicon.Resources.Common_Lyric}" IsChecked="{Binding LyricMatched}" Visibility="{Binding IsNotSourceTrack, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <RadioButton Content="{loc:Loc Key={x:Static p:Resources.Track_FilterOff}}" IsChecked="{Binding FilterOff}"/>
+                    <RadioButton Content="{loc:Loc Key={x:Static p:Resources.Track_FilterOn}}" IsChecked="{Binding FilterOn}"/>
+                    <RadioButton Content="{loc:Loc Key={x:Static p:Resources.Common_Lyric}}" IsChecked="{Binding LyricMatched}" Visibility="{Binding IsNotSourceTrack, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                 </StackPanel>
             </GroupBox>
             
@@ -62,8 +63,8 @@
                             </Style>
                         </DataGridTextColumn.CellStyle>
                     </DataGridTextColumn>
-                    <DataGridTextColumn Header="{loc:Loc Key=QBMidicon.Resources.Common_Measure}" Binding="{Binding Converter={StaticResource BreakedTimeConverter}}"/>
-                    <DataGridTextColumn Header="{loc:Loc Key=QBMidicon.Resources.Common_Ticks}" Binding="{Binding AbsoluteTick}">
+                    <DataGridTextColumn Header="{loc:Loc Key={x:Static p:Resources.Common_Measure}}" Binding="{Binding Converter={StaticResource BreakedTimeConverter}}"/>
+                    <DataGridTextColumn Header="{loc:Loc Key={x:Static p:Resources.Common_Ticks}}" Binding="{Binding AbsoluteTick}">
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource MahApps.Styles.DataGridCell}">
                                 <Setter Property="HorizontalAlignment" Value="Stretch" />
@@ -79,7 +80,7 @@
                             </Style>
                         </DataGridTextColumn.CellStyle>
                     </DataGridTextColumn>
-                    <DataGridTextColumn Header="{loc:Loc Key=QBMidicon.Resources.Common_Message}" Binding="{Binding Converter={StaticResource MidiMessageConverter}}"/>
+                    <DataGridTextColumn Header="{loc:Loc Key={x:Static p:Resources.Common_Message}}" Binding="{Binding Converter={StaticResource MidiMessageConverter}}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
@@ -90,16 +91,16 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             
-            <Label Grid.Row="0" Content="{loc:Loc Key=QBMidicon.Resources.Track_Filter}"/>
+            <Label Grid.Row="0" Content="{loc:Loc Key={x:Static p:Resources.Track_Filter}}"/>
             
             <ScrollViewer Grid.Row="1">
                 <ScrollViewer.ContextMenu>
                     <ContextMenu>
                         <MenuItem 
-                            Header="{loc:Loc Key=QBMidicon.Resources.Track_UncheckAll}"
+                            Header="{loc:Loc Key={x:Static p:Resources.Track_UncheckAll}}"
                             Command="{Binding PlacementTarget.DataContext.UncheckAllFiltersCommand, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
                         <MenuItem
-                            Header="{loc:Loc Key=QBMidicon.Resources.Track_ResetDefault}"
+                            Header="{loc:Loc Key={x:Static p:Resources.Track_ResetDefault}}"
                             Command="{Binding PlacementTarget.DataContext.ResetDefaultFiltersCommand, RelativeSource={RelativeSource AncestorType=ContextMenu}}" />
                     </ContextMenu>
                 </ScrollViewer.ContextMenu>
@@ -116,7 +117,7 @@
                             </Setter>
                         </Style>
                     </StackPanel.Resources>
-                    <Expander Header="{loc:Loc Key=QBMidicon.Resources.Common_Meta}">
+                    <Expander Header="{loc:Loc Key={x:Static p:Resources.Common_Meta}}">
                         <ListBox ItemsSource="{Binding FilterMeta}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
@@ -125,7 +126,7 @@
                             </ListBox.ItemTemplate>
                         </ListBox>
                     </Expander>
-                    <Expander Header="{loc:Loc Key=QBMidicon.Resources.Common_ChannelVoice}">
+                    <Expander Header="{loc:Loc Key={x:Static p:Resources.Common_ChannelVoice}}">
                         <ListBox ItemsSource="{Binding FilterChannelVoice}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
@@ -134,7 +135,7 @@
                             </ListBox.ItemTemplate>
                         </ListBox>
                     </Expander>
-                    <Expander Header="{loc:Loc Key=QBMidicon.Resources.Common_SysEx}">
+                    <Expander Header="{loc:Loc Key={x:Static p:Resources.Common_SysEx}}">
                         <ListBox ItemsSource="{Binding FilterSysEx}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
@@ -143,7 +144,7 @@
                             </ListBox.ItemTemplate>
                         </ListBox>
                     </Expander>
-                    <Expander Header="{loc:Loc Key=QBMidicon.Resources.Common_ControlChange}">
+                    <Expander Header="{loc:Loc Key={x:Static p:Resources.Common_ControlChange}}">
                         <ListBox ItemsSource="{Binding FilterControlChange}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>

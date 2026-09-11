@@ -6,6 +6,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
+    xmlns:p="clr-namespace:QBMidicon"
     xmlns:resLocal="clr-namespace:QBMidicon"
     mc:Ignorable="d"
     d:DesignHeight="800"
@@ -29,7 +30,7 @@
             <TextBlock
                 Style="{StaticResource PageTitleStyle}"
                 Margin="{StaticResource MediumLeftMargin}"
-                Text="{loc:Loc Key=QBMidicon.Resources.Title_ConvertSettingPage}" />
+                Text="{loc:Loc Key={x:Static p:Resources.Title_ConvertSettingPage}}" />
         </StackPanel>
         <Grid
             Grid.Row="1"
@@ -63,27 +64,27 @@
                     </Style>
                 </StackPanel.Resources>
                 <GroupBox
-                    Header="{loc:Loc Key=QBMidicon.Resources.Common_Common}"
+                    Header="{loc:Loc Key={x:Static p:Resources.Common_Common}}"
                     Style="{StaticResource GroupBoxBaseStyle}">
                     <StackPanel
                         HorizontalAlignment="Left">
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_ChannelFix}"
+                            Content="{loc:Loc Key={x:Static p:Resources.Convert_ChannelFix}}"
                             IsChecked="{Binding ChannelFix}" />
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_InsertTrackName}"
+                            Content="{loc:Loc Key={x:Static p:Resources.Convert_InsertTrackName}}"
                             IsChecked="{Binding InsertTrackName}" />
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_RemoveProgramChange}"
+                            Content="{loc:Loc Key={x:Static p:Resources.Convert_RemoveProgramChange}}"
                             IsChecked="{Binding RemoveProgramChange}" />
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_ReplaceNoteOn}"
+                            Content="{loc:Loc Key={x:Static p:Resources.Convert_ReplaceNoteOn}}"
                             IsChecked="{Binding ReplaceNoteOn}" />
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_CreateCodeTrack}"
+                            Content="{loc:Loc Key={x:Static p:Resources.Convert_CreateCodeTrack}}"
                             IsChecked="{Binding CreateCodeTrack}" />
                         <TextBlock
-                            Text="{loc:Loc Key=QBMidicon.Resources.Convert_TextEncoding}" />
+                            Text="{loc:Loc Key={x:Static p:Resources.Convert_TextEncoding}}" />
                         <ComboBox
                             HorizontalAlignment="Left"
                             Width="100"
@@ -92,20 +93,20 @@
                     </StackPanel>
                 </GroupBox>
                 <GroupBox
-                    Header="{loc:Loc Key=QBMidicon.Resources.Common_Lyric}"
+                    Header="{loc:Loc Key={x:Static p:Resources.Common_Lyric}}"
                     Style="{StaticResource GroupBoxBaseStyle}">
                     <StackPanel
                         HorizontalAlignment="Left">
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_Adjustment}"
+                            Content="{loc:Loc Key={x:Static p:Resources.Convert_Adjustment}}"
                             IsChecked="{Binding LyricAdjustment}" />
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_PaddingPlus}"
+                            Content="{loc:Loc Key={x:Static p:Resources.Convert_PaddingPlus}}"
                             IsChecked="{Binding LyricPaddingPlus}" />
                     </StackPanel>
                 </GroupBox>
                 <GroupBox
-                    Header="{loc:Loc Key=QBMidicon.Resources.Common_SRT}"
+                    Header="{loc:Loc Key={x:Static p:Resources.Common_SRT}}"
                     Style="{StaticResource GroupBoxBaseStyle}">
                     <StackPanel
                         HorizontalAlignment="Left">
@@ -113,24 +114,24 @@
                             Orientation="Horizontal">
                             <Label
                                 Width="80"
-                                Content="{loc:Loc Key=QBMidicon.Resources.Convert_SRTOffset}" />
+                                Content="{loc:Loc Key={x:Static p:Resources.Convert_SRTOffset}}" />
                             <TextBox
                                 Width="50"
                                 d:Text="500"
                                 Text="{Binding SRTOffset}" />
                         </StackPanel>
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_RemoveComment}"
+                            Content="{loc:Loc Key={x:Static p:Resources.Convert_RemoveComment}}"
                             IsChecked="{Binding SRTRemoveComment}" />
                     </StackPanel>
                 </GroupBox>
                 <GroupBox
-                    Header="{loc:Loc Key=QBMidicon.Resources.Convert_XFOption}"
+                    Header="{loc:Loc Key={x:Static p:Resources.Convert_XFOption}}"
                     Style="{StaticResource GroupBoxBaseStyle}">
                     <StackPanel
                         HorizontalAlignment="Left">
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_XFStyleConvert}"
+                            Content="{loc:Loc Key={x:Static p:Resources.Convert_XFStyleConvert}}"
                             IsChecked="{Binding XFStyleConvert}" />
                     </StackPanel>
                 </GroupBox>

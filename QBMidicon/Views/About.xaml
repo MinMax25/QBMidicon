@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:p="clr-namespace:QBMidicon"
     xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
     xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
     Style="{StaticResource CustomMetroWindow}"
@@ -46,7 +47,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <StackPanel>
-                <TextBlock Margin="4" Text="{loc:Loc Key=QBMidicon.Resources.Common_License}"/>
+                <TextBlock Margin="4" Text="{loc:Loc Key={x:Static p:Resources.Common_License}}"/>
                 <Border BorderThickness="1" BorderBrush="Black" Height="260" Canvas.Left="170" Canvas.Top="42">
                     <ScrollViewer x:Name ="LogTextScroll1" VerticalScrollBarVisibility="Auto">
                         <TextBlock Background="White" Foreground="Black" Text="{Binding License}" TextWrapping="WrapWithOverflow" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>

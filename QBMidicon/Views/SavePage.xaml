@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:p="clr-namespace:QBMidicon"
     xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
     xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
     Style="{StaticResource CustomMetroWindow}"
@@ -24,10 +25,10 @@
     
     <Grid Margin="0">
         <StackPanel>
-            <GroupBox Style="{StaticResource GroupBoxBaseStyle}" Header="{loc:Loc Key=QBMidicon.Resources.Save_Folder}">
+            <GroupBox Style="{StaticResource GroupBoxBaseStyle}" Header="{loc:Loc Key={x:Static p:Resources.Save_Folder}}">
                 <StackPanel>
                     <StackPanel>
-                        <Label Margin="4,0,4,0" Content="{loc:Loc Key=QBMidicon.Resources.Save_FolderPath}"/>
+                        <Label Margin="4,0,4,0" Content="{loc:Loc Key={x:Static p:Resources.Save_FolderPath}}"/>
                         <TextBox
                             Style="{DynamicResource MahApps.Styles.TextBox.Search}"
                             Margin="4,0,4,4" Text="{Binding Param.FolderPath}"
@@ -37,10 +38,10 @@
                 </StackPanel>
             </GroupBox>
 
-            <GroupBox Style="{StaticResource GroupBoxBaseStyle}" Header="{loc:Loc Key=QBMidicon.Resources.Save_Files}">
+            <GroupBox Style="{StaticResource GroupBoxBaseStyle}" Header="{loc:Loc Key={x:Static p:Resources.Save_Files}}">
                 <StackPanel>
                     <StackPanel>
-                        <Label Margin="4,0,4,0" Content="{loc:Loc Key=QBMidicon.Resources.Save_FileNamePrefix}"/>
+                        <Label Margin="4,0,4,0" Content="{loc:Loc Key={x:Static p:Resources.Save_FileNamePrefix}}"/>
                         <TextBox Margin="4,0,4,4" Text="{Binding Param.FileName}"/>
                     </StackPanel>
             
@@ -51,17 +52,17 @@
                                 <Setter Property="Width" Value="145"/>
                             </Style>
                         </DockPanel.Resources>
-                        <CheckBox Margin="4" Content="{loc:Loc Key=QBMidicon.Resources.Save_RawData}" IsChecked="{Binding Param.IsRawData}"/>
-                        <CheckBox Margin="4" Content="{loc:Loc Key=QBMidicon.Resources.Save_FilteredData}" IsChecked="{Binding Param.IsFilteredData}"/>
-                        <CheckBox Margin="4" Content="{loc:Loc Key=QBMidicon.Resources.Save_LyricTrackData}" IsChecked="{Binding Param.IsLyricTrackData}"/>
-                        <CheckBox Margin="4" Content="{loc:Loc Key=QBMidicon.Resources.Save_LyricTextData}" IsChecked="{Binding Param.IsLyricTextData}"/>
-                        <CheckBox Margin="4" Content="{loc:Loc Key=QBMidicon.Resources.Save_LyricSrtData}" IsChecked="{Binding Param.IsLyricSRTData}"/>
+                        <CheckBox Margin="4" Content="{loc:Loc Key={x:Static p:Resources.Save_RawData}}" IsChecked="{Binding Param.IsRawData}"/>
+                        <CheckBox Margin="4" Content="{loc:Loc Key={x:Static p:Resources.Save_FilteredData}}" IsChecked="{Binding Param.IsFilteredData}"/>
+                        <CheckBox Margin="4" Content="{loc:Loc Key={x:Static p:Resources.Save_LyricTrackData}}" IsChecked="{Binding Param.IsLyricTrackData}"/>
+                        <CheckBox Margin="4" Content="{loc:Loc Key={x:Static p:Resources.Save_LyricTextData}}" IsChecked="{Binding Param.IsLyricTextData}"/>
+                        <CheckBox Margin="4" Content="{loc:Loc Key={x:Static p:Resources.Save_LyricSrtData}}" IsChecked="{Binding Param.IsLyricSRTData}"/>
                     </DockPanel>
 
                 </StackPanel>
             </GroupBox>
 
-            <Button Content="{loc:Loc Key=QBMidicon.Resources.Common_Save}" Margin="4" Command="{Binding SaveCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
+            <Button Content="{loc:Loc Key={x:Static p:Resources.Common_Save}}" Margin="4" Command="{Binding SaveCommand}" CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
         </StackPanel>
     </Grid>
 </mah:MetroWindow>

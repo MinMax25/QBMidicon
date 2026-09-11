@@ -7,6 +7,7 @@
     xmlns:bh="http://schemas.microsoft.com/xaml/behaviors"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:behaviors="clr-namespace:libQB.Behaviors;assembly=libQB"
+    xmlns:p="clr-namespace:QBMidicon"
     xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
     mc:Ignorable="d"
     d:DesignHeight="450"
@@ -30,7 +31,7 @@
             <TextBlock
                 Style="{StaticResource PageTitleStyle}"
                 Margin="{StaticResource MediumLeftMargin}"
-                Text="{loc:Loc Key=QBMidicon.Resources.Title_ConvertedDataPage}" />
+                Text="{loc:Loc Key={x:Static p:Resources.Title_ConvertedDataPage}}" />
         </StackPanel>
         <Grid
             Grid.Row="1"
@@ -47,7 +48,7 @@
                 <DataGrid.ContextMenu>
                     <ContextMenu>
                         <MenuItem
-                            Header="{loc:Loc Key=QBMidicon.Resources.Common_ShowDetail}"
+                            Header="{loc:Loc Key={x:Static p:Resources.Common_ShowDetail}}"
                             Command="{Binding ShowTrackDetailCommand}" />
                     </ContextMenu>
                 </DataGrid.ContextMenu>
@@ -72,7 +73,7 @@
                     </DataGridTextColumn>
                     <DataGridTextColumn
                         Width="300"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Common_TrackName}"
+                        Header="{loc:Loc Key={x:Static p:Resources.Common_TrackName}}"
                         Binding="{Binding TrackName}"
                         IsReadOnly="True" />
                     <DataGridTextColumn
@@ -131,7 +132,7 @@
                     </DataGridTextColumn>
                     <DataGridTextColumn
                         Width="60"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Common_Events}"
+                        Header="{loc:Loc Key={x:Static p:Resources.Common_Events}}"
                         Binding="{Binding EventCount, StringFormat=N0}"
                         IsReadOnly="True">
                         <DataGridTextColumn.CellStyle>
@@ -149,12 +150,12 @@
                     </DataGridTextColumn>
                     <DataGridCheckBoxColumn
                         Width="60"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_Drum}"
+                        Header="{loc:Loc Key={x:Static p:Resources.Converted_Drum}}"
                         Binding="{Binding IsDrum, Mode=OneWay}"
                         IsReadOnly="True" />
                     <DataGridTextColumn
                         Width="60"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_LyricPercent}"
+                        Header="{loc:Loc Key={x:Static p:Resources.Converted_LyricPercent}}"
                         Binding="{Binding LyricMatchRatio, StringFormat=0.0}"
                         IsReadOnly="True">
                         <DataGridTextColumn.CellStyle>
@@ -172,12 +173,12 @@
                     </DataGridTextColumn>
                     <DataGridCheckBoxColumn
                         Width="60"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Common_Lyric}"
+                        Header="{loc:Loc Key={x:Static p:Resources.Common_Lyric}}"
                         Binding="{Binding LyricMatched}"
                         IsReadOnly="True" />
                     <DataGridTextColumn
                         Width="80"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_NoteRange}"
+                        Header="{loc:Loc Key={x:Static p:Resources.Converted_NoteRange}}"
                         Binding="{Binding Converter={StaticResource PitchRangeConverter}}"
                         IsReadOnly="True">
                         <DataGridTextColumn.CellStyle>
@@ -192,7 +193,7 @@
                     </DataGridTextColumn>
                     <DataGridTemplateColumn
                         Width="90"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_Transpose}"
+                        Header="{loc:Loc Key={x:Static p:Resources.Converted_Transpose}}"
                         IsReadOnly="False">
                         <!-- 表示用 -->
                         <DataGridTemplateColumn.CellTemplate>

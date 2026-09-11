@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:p="clr-namespace:QBMidicon"
     xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
     mc:Ignorable="d"
     d:DesignHeight="450" d:DesignWidth="800">
@@ -34,7 +35,7 @@
             <TextBlock
                 Style="{StaticResource PageTitleStyle}"
                 Margin="{StaticResource MediumLeftMargin}"
-                Text="{loc:Loc Key=QBMidicon.Resources.Title_EventFilterPage}" />
+                Text="{loc:Loc Key={x:Static p:Resources.Title_EventFilterPage}}" />
         </StackPanel>
 
         <Grid
@@ -49,7 +50,7 @@
 
             <ScrollViewer Grid.Row="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
               <DockPanel>
-                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_Meta}">
+                <GroupBox Header="{loc:Loc Key={x:Static p:Resources.Common_Meta}}">
                   <ListBox ItemsSource="{Binding FilterMeta}">
                     <ListBox.ItemTemplate>
                       <DataTemplate>
@@ -59,7 +60,7 @@
                   </ListBox>
                 </GroupBox>
 
-                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_ChannelVoice}">
+                <GroupBox Header="{loc:Loc Key={x:Static p:Resources.Common_ChannelVoice}}">
                   <ListBox ItemsSource="{Binding FilterChannelVoice}">
                     <ListBox.ItemTemplate>
                       <DataTemplate>
@@ -69,7 +70,7 @@
                   </ListBox>
                 </GroupBox>
 
-                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_SysEx}">
+                <GroupBox Header="{loc:Loc Key={x:Static p:Resources.Common_SysEx}}">
                   <ListBox ItemsSource="{Binding FilterSysEx}">
                     <ListBox.ItemTemplate>
                       <DataTemplate>
@@ -79,7 +80,7 @@
                   </ListBox>
                 </GroupBox>
 
-                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_ControlChange}">
+                <GroupBox Header="{loc:Loc Key={x:Static p:Resources.Common_ControlChange}}">
                   <ListBox ItemsSource="{Binding FilterControlChange}">
                     <ListBox.ItemTemplate>
                       <DataTemplate>
