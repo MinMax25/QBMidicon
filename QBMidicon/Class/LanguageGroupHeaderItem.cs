@@ -19,6 +19,9 @@ public sealed class LanguageGroupHeaderItem : INotifyPropertyChanged
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(DisplayName)));
     }
 
+    // ComboBox.SelectedValuePath="Code" 評価時にプロパティ欠落による Binding Error が発生するのを防止する
+    public string Code => string.Empty;
+
     public string DisplayName => LocalizationManager.Instance[key] ?? key;
 
     public event PropertyChangedEventHandler? PropertyChanged;

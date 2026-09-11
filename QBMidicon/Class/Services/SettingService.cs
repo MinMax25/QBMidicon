@@ -10,8 +10,8 @@ namespace QBMidicon.Class.Services;
 [DISingleton<ISettingService>]
 public partial class SettingService : ObservableObject, ISettingService
 {
-    private readonly ISettingStore<AppSettings> settingStore;
-    private readonly IThemeSelectorService themeSelector;
+    private readonly ISettingStore<AppSettings> _settingStore;
+    private readonly IThemeSelectorService _themeSelector;
 
     [ObservableProperty]
     private BaseTheme baseTheme = BaseTheme.Dark;
@@ -30,19 +30,19 @@ public partial class SettingService : ObservableObject, ISettingService
 
     public SettingService(ISettingStore<AppSettings> settingStore, IThemeSelectorService themeSelector)
     {
-        this.settingStore = settingStore;
-        this.themeSelector = themeSelector;
+        _settingStore = settingStore;
+        _themeSelector = themeSelector;
     }
 
-    partial void OnBaseThemeChanged(BaseTheme value) => themeSelector?.SetTheme(value, ThemeColor);
+    partial void OnBaseThemeChanged(BaseTheme value) => _themeSelector?.SetTheme(value, ThemeColor);
 
-    partial void OnThemeColorChanged(string value) => themeSelector?.SetTheme(BaseTheme, value);
+    partial void OnThemeColorChanged(string value) => _themeSelector?.SetTheme(BaseTheme, value);
 
     partial void OnLanguageChanged(string value) => ApplyLanguage(value);
 
     public void Load()
     {
-        var settings = settingStore.Load();
+        var settings = _settingStore.Load();
         BaseTheme = settings.BaseTheme;
         ThemeColor = settings.ThemeColor;
         Language = settings.Language;
@@ -50,12 +50,12 @@ public partial class SettingService : ObservableObject, ISettingService
         LastSaveFolderPath = settings.LastSaveFolderPath;
 
         ApplyLanguage(Language);
-        themeSelector.SetTheme(BaseTheme, ThemeColor);
+        _themeSelector.SetTheme(BaseTheme, ThemeColor);
     }
 
     public void Save()
     {
-        settingStore.Save(new AppSettings
+        _settingStore.Save(new AppSettings
         {
             BaseTheme = BaseTheme,
             ThemeColor = ThemeColor,

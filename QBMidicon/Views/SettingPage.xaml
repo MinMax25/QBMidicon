@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Class="QBMidicon.Views.SettingPage"
     Style="{DynamicResource MahApps.Styles.Page}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -62,30 +62,20 @@
                         <DockPanel>
                             <Label Width="100" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{loc:Loc Key=QBMidicon.Resources.SettingLanguage, Fallback={x:Static resLocal:Resources.SettingLanguage}}"/>
                             <ComboBox Width="160" SelectedValue="{Binding Setting.Language}" SelectedValuePath="Code" ItemsSource="{Binding AvailableLanguages}">
-                                <ComboBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <Grid>
-                                            <StackPanel x:Name="LanguagePanel" Orientation="Horizontal">
-                                                <Image Width="20" Height="15" Source="{Binding Code, Converter={StaticResource FlagConverter}}" Margin="0,0,6,0"/>
-                                                <TextBlock Text="{Binding DisplayName}"/>
-                                            </StackPanel>
-                                            <StackPanel x:Name="HeaderPanel" Visibility="Collapsed">
-                                                <TextBlock Text="{Binding DisplayName}" FontWeight="Bold" FontSize="10" Opacity="0.7"/>
-                                                <Separator/>
-                                            </StackPanel>
-                                        </Grid>
-                                        <DataTemplate.Triggers>
-                                            <DataTrigger Binding="{Binding}" Value="{x:Static local:LanguageGroupHeaderItem.BuiltIn}">
-                                                <Setter TargetName="LanguagePanel" Property="Visibility" Value="Collapsed"/>
-                                                <Setter TargetName="HeaderPanel" Property="Visibility" Value="Visible"/>
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Binding}" Value="{x:Static local:LanguageGroupHeaderItem.LanguagePacks}">
-                                                <Setter TargetName="LanguagePanel" Property="Visibility" Value="Collapsed"/>
-                                                <Setter TargetName="HeaderPanel" Property="Visibility" Value="Visible"/>
-                                            </DataTrigger>
-                                        </DataTemplate.Triggers>
+                                <ComboBox.Resources>
+                                    <DataTemplate DataType="{x:Type local:LanguageGroupHeaderItem}">
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding DisplayName}" FontWeight="Bold" FontSize="10" Opacity="0.7"/>
+                                            <Separator/>
+                                        </StackPanel>
                                     </DataTemplate>
-                                </ComboBox.ItemTemplate>
+                                    <DataTemplate DataType="{x:Type loc:LanguageInfo}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Width="20" Height="15" Source="{Binding Code, Converter={StaticResource FlagConverter}}" Margin="0,0,6,0"/>
+                                            <TextBlock Text="{Binding DisplayName}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.Resources>
                                 <ComboBox.ItemContainerStyle>
                                     <Style TargetType="ComboBoxItem">
                                         <Style.Triggers>
@@ -93,11 +83,13 @@
                                                 <Setter Property="IsEnabled" Value="False"/>
                                                 <Setter Property="IsHitTestVisible" Value="False"/>
                                                 <Setter Property="Focusable" Value="False"/>
+                                                <Setter Property="Padding" Value="4,2"/>
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding}" Value="{x:Static local:LanguageGroupHeaderItem.LanguagePacks}">
                                                 <Setter Property="IsEnabled" Value="False"/>
                                                 <Setter Property="IsHitTestVisible" Value="False"/>
                                                 <Setter Property="Focusable" Value="False"/>
+                                                <Setter Property="Padding" Value="4,2"/>
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>

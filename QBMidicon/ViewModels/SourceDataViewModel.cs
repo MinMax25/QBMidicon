@@ -1,4 +1,4 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -40,7 +40,7 @@ public partial class SourceDataViewModel : ViewModelBase
     {
         get
         {
-            return _midiData.Origin != null ? new ObservableCollection<ITrack>(_midiData.Origin.Tracks) : null!;
+            return _midiData.Origin != null ? new ObservableCollection<ITrack>(_midiData.Origin.Tracks) : new ObservableCollection<ITrack>();
         }
     }
 

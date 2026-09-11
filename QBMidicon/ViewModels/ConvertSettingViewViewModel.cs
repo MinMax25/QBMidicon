@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using libMidi.SMF;
 using libMidi.SMF.enums;
 using libQB.Attributes;
@@ -51,7 +51,7 @@ public partial class ConvertSettingPageViewModel
 
     #region Fields
 
-    MidiData MidiData;
+    private readonly MidiData _midiData;
 
     #endregion
 
@@ -61,7 +61,7 @@ public partial class ConvertSettingPageViewModel
     public ConvertSettingPageViewModel(IDIContainer dIContainer, MidiData midiData)
             : base(dIContainer)
     {
-        MidiData = midiData;
+        _midiData = midiData;
 
         ChannelFix = SMFConverter.Def.Setting.ChannelFix;
         InsertTrackName = SMFConverter.Def.Setting.InsertTrackName;

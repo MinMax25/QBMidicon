@@ -1,4 +1,4 @@
-﻿using System.Windows.Media;
+using System.Windows.Media;
 using ControlzEx.Theming;
 using libQB.Attributes;
 using libQB.Localization;
@@ -23,29 +23,59 @@ public partial class SettingViewModel : ViewModelBase
 
     public Dictionary<string, Brush> AccentColors { get; set; }
 
-    private static readonly string[] BuiltInLanguageOrder = { "ja-JP", "en-US" };
-
-    private static readonly Dictionary<string, string> LanguageDisplayNames = new()
+    private static readonly Dictionary<string, string> DisplayNameOverrides = new()
     {
-        ["de-DE"] = "Deutsch", ["es-ES"] = "Español", ["fr-FR"] = "Français",
-        ["ko-KR"] = "한국어", ["pt-BR"] = "Português (Brasil)",
-        ["zh-CN"] = "简体中文", ["zh-TW"] = "繁體中文"
+        ["zh-TW"] = "繁體中文",
+        ["zh-CN"] = "简体中文",
+        ["ko-KR"] = "한국어",
+        ["es-ES"] = "Español",
+        ["pt-BR"] = "Português (Brasil)",
+        ["de-DE"] = "Deutsch",
+        ["fr-FR"] = "Français",
     };
+
+    private static readonly string[] BuiltInOrder = { "ja-JP", "en-US" };
 
     public IReadOnlyList<object> AvailableLanguages
     {
         get
         {
             var languages = LocalizationManager.Instance.AvailableLanguages
-                .Select(x => LanguageDisplayNames.TryGetValue(x.Code, out var displayName)
-                    ? new LanguageInfo { Code = x.Code, DisplayName = displayName, IsBuiltIn = x.IsBuiltIn }
-                    : x)
+                .Select(l =>
+                {
+                    return DisplayNameOverrides.TryGetValue(l.Code, out var name)
+                        ? new LanguageInfo { Code = l.Code, DisplayName = name, IsBuiltIn = l.IsBuiltIn }
+                        : l;
+                })
                 .ToList();
+
+            var builtIn = BuiltInOrder
+                .Select(code =>
+                {
+                    return languages.FirstOrDefault(l => l.Code == code);
+                })
+                .Where(l => l != null)
+                .ToList();
+
+            var external = languages
+                .Where(l => l.IsBuiltIn == false)
+                .OrderBy(l => l.DisplayName, StringComparer.Ordinal)
+                .ToList();
+
             var result = new List<object>();
-            var builtIn = BuiltInLanguageOrder.Select(code => languages.FirstOrDefault(x => x.Code == code)).Where(x => x != null).ToList();
-            if (builtIn.Count > 0) { result.Add(LanguageGroupHeaderItem.BuiltIn); result.AddRange(builtIn!); }
-            var packs = languages.Where(x => !x.IsBuiltIn).OrderBy(x => x.DisplayName, StringComparer.CurrentCulture).ToList();
-            if (packs.Count > 0) { result.Add(LanguageGroupHeaderItem.LanguagePacks); result.AddRange(packs); }
+
+            if (builtIn.Count > 0)
+            {
+                result.Add(LanguageGroupHeaderItem.BuiltIn);
+                result.AddRange(builtIn!);
+            }
+
+            if (external.Count > 0)
+            {
+                result.Add(LanguageGroupHeaderItem.LanguagePacks);
+                result.AddRange(external);
+            }
+
             return result;
         }
     }

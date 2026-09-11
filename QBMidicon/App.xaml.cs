@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Windows;
@@ -172,21 +172,25 @@ namespace QBMidicon
             }
         }
 
-        private async void OnExit(object sender, ExitEventArgs e)
+        private void OnExit(object sender, ExitEventArgs e)
         {
             GetService<IDIContainer>()?.Flush();
             SMFConverter.SaveConfig();
 
+            _mutex?.Dispose();
+            _mutex = null;
+
             if (_host == null)
                 return;
 
-            await _host.StopAsync();
+            _host.StopAsync().GetAwaiter().GetResult();
             _host.Dispose();
             _host = null;
         }
 
         private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine($"[Unhandled Exception] {e.Exception}");
         }
     }
 }
