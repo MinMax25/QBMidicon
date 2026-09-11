@@ -58,10 +58,12 @@
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.ja.resx">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CustomToolNamespace>QBMidicon</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>QBMidicon</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
 

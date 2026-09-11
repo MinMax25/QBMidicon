@@ -1,4 +1,4 @@
-﻿using System.Collections.ObjectModel;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -14,7 +14,6 @@ using QBMidicon.Class;
 using QBMidicon.Class.Enums;
 using QBMidicon.Class.Services;
 using QBMidicon.Contracts.Views;
-using QBMidicon.Properties;
 using QBMidicon.Views;
 
 namespace QBMidicon.ViewModels;
@@ -299,7 +298,8 @@ public partial class ShellViewModel : ViewModelBase, IWindowClosingAware
 
     private void OnSettingPropertyChanged(object sender, PropertyChangedEventArgs e)
     {
-        if (e.PropertyName != nameof(ISettingService.Language)) return;
+        if (e.PropertyName != nameof(ISettingService.Language))
+            return;
 
         ((HamburgerMenuIconItem)MenuItems[0]).Label = App.Text("Title_SourceDataPage", "Source");
         ((HamburgerMenuIconItem)MenuItems[1]).Label = App.Text("Title_ConvertedDataPage", "Converted");

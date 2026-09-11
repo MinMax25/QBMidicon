@@ -77,7 +77,7 @@ public partial class SettingService : ObservableObject, ISettingService
             culture = new CultureInfo("en-US");
         }
 
-        Properties.Resources.Culture = culture;
+        Resources.Culture = culture;
         Thread.CurrentThread.CurrentCulture = culture;
         Thread.CurrentThread.CurrentUICulture = culture;
         libQB.Localization.LocalizationManager.Instance.SetCulture(culture.Name);

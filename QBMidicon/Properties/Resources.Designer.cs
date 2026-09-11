@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QBMidicon.Properties {
+namespace QBMidicon {
     using System;
     
     
@@ -19,7 +19,7 @@ namespace QBMidicon.Properties {
     // または Visual Studio のようなツールを使用して自動生成されました。
     // メンバーを追加または削除するには、.ResX ファイルを編集して、/str オプションと共に
     // ResGen を実行し直すか、または VS プロジェクトをビルドし直します。
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -61,11 +61,65 @@ namespace QBMidicon.Properties {
         }
         
         /// <summary>
+        ///   The application is already running. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Alert_DualBoot {
+            get {
+                return ResourceManager.GetString("Alert_DualBoot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   QBMidicon に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string AppDisplayName {
             get {
                 return ResourceManager.GetString("AppDisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Built-in languages に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string BuiltInLanguages {
+            get {
+                return ResourceManager.GetString("BuiltInLanguages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cancel に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Button_Cancel {
+            get {
+                return ResourceManager.GetString("Button_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   No に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Button_No {
+            get {
+                return ResourceManager.GetString("Button_No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   OK に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Button_OK {
+            get {
+                return ResourceManager.GetString("Button_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Yes に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Button_Yes {
+            get {
+                return ResourceManager.GetString("Button_Yes", resourceCulture);
             }
         }
         
@@ -151,6 +205,159 @@ namespace QBMidicon.Properties {
         }
         
         /// <summary>
+        ///   Channel Voice に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_ChannelVoice {
+            get {
+                return ResourceManager.GetString("Common_ChannelVoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Common に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_Common {
+            get {
+                return ResourceManager.GetString("Common_Common", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Control Change に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_ControlChange {
+            get {
+                return ResourceManager.GetString("Common_ControlChange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Events に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_Events {
+            get {
+                return ResourceManager.GetString("Common_Events", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Key に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_Key {
+            get {
+                return ResourceManager.GetString("Common_Key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   License に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_License {
+            get {
+                return ResourceManager.GetString("Common_License", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Lyric に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_Lyric {
+            get {
+                return ResourceManager.GetString("Common_Lyric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Measure に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_Measure {
+            get {
+                return ResourceManager.GetString("Common_Measure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Message に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_Message {
+            get {
+                return ResourceManager.GetString("Common_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Meta に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_Meta {
+            get {
+                return ResourceManager.GetString("Common_Meta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_Save {
+            get {
+                return ResourceManager.GetString("Common_Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Show Detail に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_ShowDetail {
+            get {
+                return ResourceManager.GetString("Common_ShowDetail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   SRT に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_SRT {
+            get {
+                return ResourceManager.GetString("Common_SRT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   SysEx に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_SysEx {
+            get {
+                return ResourceManager.GetString("Common_SysEx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Tempo に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_Tempo {
+            get {
+                return ResourceManager.GetString("Common_Tempo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ticks に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_Ticks {
+            get {
+                return ResourceManager.GetString("Common_Ticks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Track Name に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Common_TrackName {
+            get {
+                return ResourceManager.GetString("Common_TrackName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Complete! に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Complete {
@@ -196,6 +403,150 @@ namespace QBMidicon.Properties {
         }
         
         /// <summary>
+        ///   Adjustment に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_Adjustment {
+            get {
+                return ResourceManager.GetString("Convert_Adjustment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Channel Fix に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_ChannelFix {
+            get {
+                return ResourceManager.GetString("Convert_ChannelFix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Create Code Track に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_CreateCodeTrack {
+            get {
+                return ResourceManager.GetString("Convert_CreateCodeTrack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Insert Track Name に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_InsertTrackName {
+            get {
+                return ResourceManager.GetString("Convert_InsertTrackName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Padding Plus に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_PaddingPlus {
+            get {
+                return ResourceManager.GetString("Convert_PaddingPlus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Remove Comment に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_RemoveComment {
+            get {
+                return ResourceManager.GetString("Convert_RemoveComment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Remove Program Change に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_RemoveProgramChange {
+            get {
+                return ResourceManager.GetString("Convert_RemoveProgramChange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Replace Note On に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_ReplaceNoteOn {
+            get {
+                return ResourceManager.GetString("Convert_ReplaceNoteOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   SRT Offset に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_SRTOffset {
+            get {
+                return ResourceManager.GetString("Convert_SRTOffset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Text Encoding に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_TextEncoding {
+            get {
+                return ResourceManager.GetString("Convert_TextEncoding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   XF Option に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_XFOption {
+            get {
+                return ResourceManager.GetString("Convert_XFOption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   XFStyle Convert に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Convert_XFStyleConvert {
+            get {
+                return ResourceManager.GetString("Convert_XFStyleConvert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Drum に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Converted_Drum {
+            get {
+                return ResourceManager.GetString("Converted_Drum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Lyric % に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Converted_LyricPercent {
+            get {
+                return ResourceManager.GetString("Converted_LyricPercent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Note Range に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Converted_NoteRange {
+            get {
+                return ResourceManager.GetString("Converted_NoteRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Transpose に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Converted_Transpose {
+            get {
+                return ResourceManager.GetString("Converted_Transpose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Delete Selected {0} &apos;{1}&apos; に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Delete {
@@ -237,6 +588,78 @@ namespace QBMidicon.Properties {
         public static string FileNotFound {
             get {
                 return ResourceManager.GetString("FileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Language packs に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LanguagePacks {
+            get {
+                return ResourceManager.GetString("LanguagePacks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   File (_F) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Menu_File {
+            get {
+                return ResourceManager.GetString("Menu_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Close (_X) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Menu_File_Close {
+            get {
+                return ResourceManager.GetString("Menu_File_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Open (_O) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Menu_File_Open {
+            get {
+                return ResourceManager.GetString("Menu_File_Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save (_S) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Menu_File_Save {
+            get {
+                return ResourceManager.GetString("Menu_File_Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Help (_H) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Menu_Help {
+            get {
+                return ResourceManager.GetString("Menu_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   About QBMidicon に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Menu_Help_About {
+            get {
+                return ResourceManager.GetString("Menu_Help_About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Documentation に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Menu_Help_Document {
+            get {
+                return ResourceManager.GetString("Menu_Help_Document", resourceCulture);
             }
         }
         
@@ -300,6 +723,114 @@ namespace QBMidicon.Properties {
         public static string PasteError {
             get {
                 return ResourceManager.GetString("PasteError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   File Name Prefix に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Save_FileNamePrefix {
+            get {
+                return ResourceManager.GetString("Save_FileNamePrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Files to save に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Save_Files {
+            get {
+                return ResourceManager.GetString("Save_Files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Filtered Data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Save_FilteredData {
+            get {
+                return ResourceManager.GetString("Save_FilteredData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Save Folder に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Save_Folder {
+            get {
+                return ResourceManager.GetString("Save_Folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Folder Path に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Save_FolderPath {
+            get {
+                return ResourceManager.GetString("Save_FolderPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Lyric SRT Data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Save_LyricSrtData {
+            get {
+                return ResourceManager.GetString("Save_LyricSrtData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Lyric Text Data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Save_LyricTextData {
+            get {
+                return ResourceManager.GetString("Save_LyricTextData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Lyric Track Data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Save_LyricTrackData {
+            get {
+                return ResourceManager.GetString("Save_LyricTrackData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Raw Data に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Save_RawData {
+            get {
+                return ResourceManager.GetString("Save_RawData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Dark に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Setting_Dark {
+            get {
+                return ResourceManager.GetString("Setting_Dark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Light に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Setting_Light {
+            get {
+                return ResourceManager.GetString("Setting_Light", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Theme に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Setting_Theme {
+            get {
+                return ResourceManager.GetString("Setting_Theme", resourceCulture);
             }
         }
         
@@ -376,6 +907,87 @@ namespace QBMidicon.Properties {
         }
         
         /// <summary>
+        ///   Division に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Source_Division {
+            get {
+                return ResourceManager.GetString("Source_Division", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   File Info に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Source_FileInfo {
+            get {
+                return ResourceManager.GetString("Source_FileInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Format に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Source_Format {
+            get {
+                return ResourceManager.GetString("Source_Format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   MIDI Type に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Source_MidiType {
+            get {
+                return ResourceManager.GetString("Source_MidiType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Path に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Source_Path {
+            get {
+                return ResourceManager.GetString("Source_Path", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Reload に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Source_Reload {
+            get {
+                return ResourceManager.GetString("Source_Reload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Track Count に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Source_TrackCount {
+            get {
+                return ResourceManager.GetString("Source_TrackCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Tracks に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Source_Tracks {
+            get {
+                return ResourceManager.GetString("Source_Tracks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Clear に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Title_Command_Clear {
+            get {
+                return ResourceManager.GetString("Title_Command_Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Converted に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Title_ConvertedDataPage {
@@ -394,6 +1006,42 @@ namespace QBMidicon.Properties {
         }
         
         /// <summary>
+        ///   Confirm に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Title_Dialog_Confirm {
+            get {
+                return ResourceManager.GetString("Title_Dialog_Confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Error に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Title_Dialog_Error {
+            get {
+                return ResourceManager.GetString("Title_Dialog_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Title_Dialog_Information {
+            get {
+                return ResourceManager.GetString("Title_Dialog_Information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Warning に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Title_Dialog_Warning {
+            get {
+                return ResourceManager.GetString("Title_Dialog_Warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Event Filter に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string Title_EventFilterPage {
@@ -408,6 +1056,51 @@ namespace QBMidicon.Properties {
         public static string Title_SourceDataPage {
             get {
                 return ResourceManager.GetString("Title_SourceDataPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Filter に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Track_Filter {
+            get {
+                return ResourceManager.GetString("Track_Filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Filter Off に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Track_FilterOff {
+            get {
+                return ResourceManager.GetString("Track_FilterOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Filter On に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Track_FilterOn {
+            get {
+                return ResourceManager.GetString("Track_FilterOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Reset Default に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Track_ResetDefault {
+            get {
+                return ResourceManager.GetString("Track_ResetDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Uncheck All に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Track_UncheckAll {
+            get {
+                return ResourceManager.GetString("Track_UncheckAll", resourceCulture);
             }
         }
     }

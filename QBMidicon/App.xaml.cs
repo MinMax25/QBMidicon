@@ -51,7 +51,7 @@ namespace QBMidicon
 
             var appLocation = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 
-            libQB.Localization.LocalizationManager.Instance.RegisterResourceManager("QBMidicon.Resources", QBMidicon.Properties.Resources.ResourceManager);
+            libQB.Localization.LocalizationManager.Instance.RegisterResourceManager("QBMidicon.Resources", QBMidicon.Resources.ResourceManager);
             libQB.Localization.LocalizationManager.Instance.Initialize(Path.Combine(appLocation, "Languages"));
             RegisterDialogTexts();
 

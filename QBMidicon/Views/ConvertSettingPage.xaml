@@ -1,12 +1,12 @@
-﻿<Page
+<Page
     x:Class="QBMidicon.Views.ConvertSettingPage"
     Style="{DynamicResource MahApps.Styles.Page}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:resLocal="clr-namespace:QBMidicon.Properties"
     xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
+    xmlns:resLocal="clr-namespace:QBMidicon"
     mc:Ignorable="d"
     d:DesignHeight="800"
     d:DesignWidth="1300">
@@ -29,7 +29,7 @@
             <TextBlock
                 Style="{StaticResource PageTitleStyle}"
                 Margin="{StaticResource MediumLeftMargin}"
-                Text="{loc:Loc Key=QBMidicon.Resources.Title_ConvertSettingPage, Fallback={x:Static resLocal:Resources.Title_ConvertSettingPage}}" />
+                Text="{loc:Loc Key=QBMidicon.Resources.Title_ConvertSettingPage}" />
         </StackPanel>
         <Grid
             Grid.Row="1"

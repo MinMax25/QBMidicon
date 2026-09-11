@@ -9,7 +9,8 @@ public static class FlagImageProvider
 {
     public static string? Resolve(string cultureName)
     {
-        if (string.IsNullOrWhiteSpace(cultureName)) return null;
+        if (string.IsNullOrWhiteSpace(cultureName))
+            return null;
 
         try
         {

@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using libQB.Enums;
 
 namespace QBMidicon.Class.Services

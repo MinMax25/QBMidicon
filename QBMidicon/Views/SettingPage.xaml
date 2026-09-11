@@ -5,11 +5,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
     xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
     xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-    xmlns:loc="clr-namespace:libQB.Localization;assembly=libQB"
     xmlns:local="clr-namespace:QBMidicon.Class"
-    xmlns:resLocal="clr-namespace:QBMidicon.Properties"
     Dialog:DialogParticipation.Register="{Binding}"
     mc:Ignorable="d"
     d:DesignWidth="1300" d:DesignHeight="800">
@@ -22,7 +21,7 @@
 
         <StackPanel Grid.Row="0" Margin="{StaticResource MediumLeftMargin}" VerticalAlignment="Center" Orientation="Horizontal">
             <ContentControl IsTabStop="False" Content="{StaticResource SettingPageIcon}" Margin="8,2,0,0"/>
-            <TextBlock Style="{StaticResource PageTitleStyle}" Text="{loc:Loc Key=QBMidicon.Resources.SettingPageTitle, Fallback={x:Static resLocal:Resources.SettingPageTitle}}"/>
+            <TextBlock Style="{StaticResource PageTitleStyle}" Text="{loc:Loc Key=QBMidicon.Resources.SettingPageTitle}"/>
         </StackPanel>
 
         <ScrollViewer Grid.Row="1" Margin="{StaticResource MediumLeftRightMargin}">
@@ -47,7 +46,7 @@
                             <RadioButton Margin="4" Width="80" Content="{loc:Loc Key=QBMidicon.Resources.Setting_Dark, Fallback=Dark}" IsChecked="{Binding Setting.BaseTheme, ConverterParameter=Dark, Converter={StaticResource BaseThemeConverter}}"/>
                         </StackPanel>
                         <DockPanel>
-                            <Label Width="110" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{loc:Loc Key=QBMidicon.Resources.SettingAccentColor, Fallback={x:Static resLocal:Resources.SettingAccentColor}}"/>
+                            <Label Width="110" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{loc:Loc Key=QBMidicon.Resources.SettingAccentColor}"/>
                             <ComboBox HorizontalAlignment="Left" Width="140" SelectedValue="{Binding Setting.ThemeColor}" ItemsSource="{Binding AccentColors}" SelectedValuePath="Key">
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
@@ -60,7 +59,7 @@
                             </ComboBox>
                         </DockPanel>
                         <DockPanel>
-                            <Label Width="100" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{loc:Loc Key=QBMidicon.Resources.SettingLanguage, Fallback={x:Static resLocal:Resources.SettingLanguage}}"/>
+                            <Label Width="100" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{loc:Loc Key=QBMidicon.Resources.SettingLanguage}"/>
                             <ComboBox Width="160" SelectedValue="{Binding Setting.Language}" SelectedValuePath="Code" ItemsSource="{Binding AvailableLanguages}">
                                 <ComboBox.Resources>
                                     <DataTemplate DataType="{x:Type local:LanguageGroupHeaderItem}">
