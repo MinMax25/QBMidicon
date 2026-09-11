@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Class="QBMidicon.Views.EventFilterPage"
     Style="{DynamicResource MahApps.Styles.Page}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -49,7 +49,7 @@
 
             <ScrollViewer Grid.Row="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
               <DockPanel>
-                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_Meta, Fallback=Meta}">
+                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_Meta}">
                   <ListBox ItemsSource="{Binding FilterMeta}">
                     <ListBox.ItemTemplate>
                       <DataTemplate>
@@ -59,7 +59,7 @@
                   </ListBox>
                 </GroupBox>
 
-                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_ChannelVoice, Fallback=Channel Voice}">
+                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_ChannelVoice}">
                   <ListBox ItemsSource="{Binding FilterChannelVoice}">
                     <ListBox.ItemTemplate>
                       <DataTemplate>
@@ -69,7 +69,7 @@
                   </ListBox>
                 </GroupBox>
 
-                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_SysEx, Fallback=SysEx}">
+                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_SysEx}">
                   <ListBox ItemsSource="{Binding FilterSysEx}">
                     <ListBox.ItemTemplate>
                       <DataTemplate>
@@ -79,7 +79,7 @@
                   </ListBox>
                 </GroupBox>
 
-                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_ControlChange, Fallback=Control Change}">
+                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Common_ControlChange}">
                   <ListBox ItemsSource="{Binding FilterControlChange}">
                     <ListBox.ItemTemplate>
                       <DataTemplate>

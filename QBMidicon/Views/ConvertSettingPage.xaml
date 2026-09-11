@@ -63,27 +63,27 @@
                     </Style>
                 </StackPanel.Resources>
                 <GroupBox
-                    Header="{loc:Loc Key=QBMidicon.Resources.Common_Common, Fallback=Common}"
+                    Header="{loc:Loc Key=QBMidicon.Resources.Common_Common}"
                     Style="{StaticResource GroupBoxBaseStyle}">
                     <StackPanel
                         HorizontalAlignment="Left">
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_ChannelFix, Fallback=Channel Fix}"
+                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_ChannelFix}"
                             IsChecked="{Binding ChannelFix}" />
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_InsertTrackName, Fallback=Insert Track Name}"
+                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_InsertTrackName}"
                             IsChecked="{Binding InsertTrackName}" />
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_RemoveProgramChange, Fallback=Remove Program Change}"
+                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_RemoveProgramChange}"
                             IsChecked="{Binding RemoveProgramChange}" />
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_ReplaceNoteOn, Fallback=Replace Note On}"
+                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_ReplaceNoteOn}"
                             IsChecked="{Binding ReplaceNoteOn}" />
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_CreateCodeTrack, Fallback=Create Code Track}"
+                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_CreateCodeTrack}"
                             IsChecked="{Binding CreateCodeTrack}" />
                         <TextBlock
-                            Text="{loc:Loc Key=QBMidicon.Resources.Convert_TextEncoding, Fallback=Text Encoding}" />
+                            Text="{loc:Loc Key=QBMidicon.Resources.Convert_TextEncoding}" />
                         <ComboBox
                             HorizontalAlignment="Left"
                             Width="100"
@@ -92,20 +92,20 @@
                     </StackPanel>
                 </GroupBox>
                 <GroupBox
-                    Header="{loc:Loc Key=QBMidicon.Resources.Common_Lyric, Fallback=Lyric}"
+                    Header="{loc:Loc Key=QBMidicon.Resources.Common_Lyric}"
                     Style="{StaticResource GroupBoxBaseStyle}">
                     <StackPanel
                         HorizontalAlignment="Left">
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_Adjustment, Fallback=Adjustment}"
+                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_Adjustment}"
                             IsChecked="{Binding LyricAdjustment}" />
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_PaddingPlus, Fallback=Padding Plus}"
+                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_PaddingPlus}"
                             IsChecked="{Binding LyricPaddingPlus}" />
                     </StackPanel>
                 </GroupBox>
                 <GroupBox
-                    Header="{loc:Loc Key=QBMidicon.Resources.Common_SRT, Fallback=SRT}"
+                    Header="{loc:Loc Key=QBMidicon.Resources.Common_SRT}"
                     Style="{StaticResource GroupBoxBaseStyle}">
                     <StackPanel
                         HorizontalAlignment="Left">
@@ -113,24 +113,24 @@
                             Orientation="Horizontal">
                             <Label
                                 Width="80"
-                                Content="{loc:Loc Key=QBMidicon.Resources.Convert_SRTOffset, Fallback=SRT Offset}" />
+                                Content="{loc:Loc Key=QBMidicon.Resources.Convert_SRTOffset}" />
                             <TextBox
                                 Width="50"
                                 d:Text="500"
                                 Text="{Binding SRTOffset}" />
                         </StackPanel>
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_RemoveComment, Fallback=Remove Comment}"
+                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_RemoveComment}"
                             IsChecked="{Binding SRTRemoveComment}" />
                     </StackPanel>
                 </GroupBox>
                 <GroupBox
-                    Header="{loc:Loc Key=QBMidicon.Resources.Convert_XFOption, Fallback=XF Option}"
+                    Header="{loc:Loc Key=QBMidicon.Resources.Convert_XFOption}"
                     Style="{StaticResource GroupBoxBaseStyle}">
                     <StackPanel
                         HorizontalAlignment="Left">
                         <CheckBox
-                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_XFStyleConvert, Fallback=XFStyle Convert}"
+                            Content="{loc:Loc Key=QBMidicon.Resources.Convert_XFStyleConvert}"
                             IsChecked="{Binding XFStyleConvert}" />
                     </StackPanel>
                 </GroupBox>

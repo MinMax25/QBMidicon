@@ -111,15 +111,15 @@
             </Grid.RowDefinitions>
 
             <Menu Grid.Row="0" Grid.ColumnSpan="2" Focusable="False">
-                <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_File, Fallback=File}" Focusable="False">
-                    <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_File_Open, Fallback=Open}" Command="{Binding OpenFileCommand}"/>
-                    <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_File_Save, Fallback=Save}" Command="{Binding SaveFileCommand}"/>
+                <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_File}" Focusable="False">
+                    <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_File_Open}" Command="{Binding OpenFileCommand}"/>
+                    <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_File_Save}" Command="{Binding SaveFileCommand}"/>
                     <Separator/>
-                    <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_File_Close, Fallback=Close}" Command="{Binding CloseCommand}"/>
+                    <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_File_Close}" Command="{Binding CloseCommand}"/>
                 </MenuItem>
-                <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_Help, Fallback=Help}" Focusable="False">
-                    <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_Help_Document, Fallback=Documentation}" Command="{Binding ShowDocumentCommand}"/>
-                    <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_Help_About, Fallback=About}" Command="{Binding ShowAboutCommand}"/>
+                <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_Help}" Focusable="False">
+                    <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_Help_Document}" Command="{Binding ShowDocumentCommand}"/>
+                    <MenuItem Header="{loc:Loc Key=QBMidicon.Resources.Menu_Help_About}" Command="{Binding ShowAboutCommand}"/>
                 </MenuItem>
             </Menu>
 

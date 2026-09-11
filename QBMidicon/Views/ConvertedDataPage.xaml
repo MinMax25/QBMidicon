@@ -47,7 +47,7 @@
                 <DataGrid.ContextMenu>
                     <ContextMenu>
                         <MenuItem
-                            Header="{loc:Loc Key=QBMidicon.Resources.Common_ShowDetail, Fallback=Show Detail}"
+                            Header="{loc:Loc Key=QBMidicon.Resources.Common_ShowDetail}"
                             Command="{Binding ShowTrackDetailCommand}" />
                     </ContextMenu>
                 </DataGrid.ContextMenu>
@@ -72,7 +72,7 @@
                     </DataGridTextColumn>
                     <DataGridTextColumn
                         Width="300"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Common_TrackName, Fallback=Track Name}"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Common_TrackName}"
                         Binding="{Binding TrackName}"
                         IsReadOnly="True" />
                     <DataGridTextColumn
@@ -131,7 +131,7 @@
                     </DataGridTextColumn>
                     <DataGridTextColumn
                         Width="60"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Common_Events, Fallback=Events}"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Common_Events}"
                         Binding="{Binding EventCount, StringFormat=N0}"
                         IsReadOnly="True">
                         <DataGridTextColumn.CellStyle>
@@ -149,12 +149,12 @@
                     </DataGridTextColumn>
                     <DataGridCheckBoxColumn
                         Width="60"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_Drum, Fallback=Drum}"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_Drum}"
                         Binding="{Binding IsDrum, Mode=OneWay}"
                         IsReadOnly="True" />
                     <DataGridTextColumn
                         Width="60"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_LyricPercent, Fallback=Lyric %}"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_LyricPercent}"
                         Binding="{Binding LyricMatchRatio, StringFormat=0.0}"
                         IsReadOnly="True">
                         <DataGridTextColumn.CellStyle>
@@ -172,12 +172,12 @@
                     </DataGridTextColumn>
                     <DataGridCheckBoxColumn
                         Width="60"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Common_Lyric, Fallback=Lyric}"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Common_Lyric}"
                         Binding="{Binding LyricMatched}"
                         IsReadOnly="True" />
                     <DataGridTextColumn
                         Width="80"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_NoteRange, Fallback=Note Range}"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_NoteRange}"
                         Binding="{Binding Converter={StaticResource PitchRangeConverter}}"
                         IsReadOnly="True">
                         <DataGridTextColumn.CellStyle>
@@ -192,7 +192,7 @@
                     </DataGridTextColumn>
                     <DataGridTemplateColumn
                         Width="90"
-                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_Transpose, Fallback=Transpose}"
+                        Header="{loc:Loc Key=QBMidicon.Resources.Converted_Transpose}"
                         IsReadOnly="False">
                         <!-- 表示用 -->
                         <DataGridTemplateColumn.CellTemplate>

@@ -39,11 +39,11 @@
             </ScrollViewer.Resources>
             
             <StackPanel>
-                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Setting_Theme, Fallback=Theme}" Style="{StaticResource GroupBoxBaseStyle}">
+                <GroupBox Header="{loc:Loc Key=QBMidicon.Resources.Setting_Theme}" Style="{StaticResource GroupBoxBaseStyle}">
                     <DockPanel Margin="8" HorizontalAlignment="Center">
                         <StackPanel Orientation="Horizontal">
-                            <RadioButton Margin="4" Width="80" Content="{loc:Loc Key=QBMidicon.Resources.Setting_Light, Fallback=Light}" IsChecked="{Binding Setting.BaseTheme, ConverterParameter=Light, Converter={StaticResource BaseThemeConverter}}"/>
-                            <RadioButton Margin="4" Width="80" Content="{loc:Loc Key=QBMidicon.Resources.Setting_Dark, Fallback=Dark}" IsChecked="{Binding Setting.BaseTheme, ConverterParameter=Dark, Converter={StaticResource BaseThemeConverter}}"/>
+                            <RadioButton Margin="4" Width="80" Content="{loc:Loc Key=QBMidicon.Resources.Setting_Light}" IsChecked="{Binding Setting.BaseTheme, ConverterParameter=Light, Converter={StaticResource BaseThemeConverter}}"/>
+                            <RadioButton Margin="4" Width="80" Content="{loc:Loc Key=QBMidicon.Resources.Setting_Dark}" IsChecked="{Binding Setting.BaseTheme, ConverterParameter=Dark, Converter={StaticResource BaseThemeConverter}}"/>
                         </StackPanel>
                         <DockPanel>
                             <Label Width="110" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{loc:Loc Key=QBMidicon.Resources.SettingAccentColor}"/>

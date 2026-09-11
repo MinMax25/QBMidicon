@@ -46,7 +46,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <StackPanel>
-                <TextBlock Margin="4" Text="{loc:Loc Key=QBMidicon.Resources.Common_License, Fallback=License}"/>
+                <TextBlock Margin="4" Text="{loc:Loc Key=QBMidicon.Resources.Common_License}"/>
                 <Border BorderThickness="1" BorderBrush="Black" Height="260" Canvas.Left="170" Canvas.Top="42">
                     <ScrollViewer x:Name ="LogTextScroll1" VerticalScrollBarVisibility="Auto">
                         <TextBlock Background="White" Foreground="Black" Text="{Binding License}" TextWrapping="WrapWithOverflow" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
