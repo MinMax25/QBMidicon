@@ -1,4 +1,4 @@
-﻿namespace QBMidicon.Class
+namespace QBMidicon.Class
 {
     public static class MultiStartupUtil
     {

@@ -1,4 +1,4 @@
-﻿namespace QBMidicon.Contracts.ViewModels
+namespace QBMidicon.Contracts.ViewModels
 {
     public interface INavigationAware
     {

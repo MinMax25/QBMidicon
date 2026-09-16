@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.Windows.Data;
 using libMidi.Messages;
 using libMidi.SMF;

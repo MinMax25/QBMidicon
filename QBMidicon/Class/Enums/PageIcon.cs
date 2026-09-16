@@ -1,4 +1,4 @@
-﻿namespace QBMidicon.Class.Enums;
+namespace QBMidicon.Class.Enums;
 
 internal enum PageIcon
 {

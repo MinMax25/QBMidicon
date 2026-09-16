@@ -1,4 +1,4 @@
-﻿namespace QBMidicon.Models
+namespace QBMidicon.Models
 {
     public class AppConfig
     {

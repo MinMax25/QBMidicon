@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using System.Reflection;
 using CommunityToolkit.Mvvm.ComponentModel;
 using libQB.Attributes;

@@ -1,4 +1,4 @@
-﻿using System.Windows.Controls;
+using System.Windows.Controls;
 using QBMidicon.Class.Extensions;
 using QBMidicon.Contracts.Services;
 

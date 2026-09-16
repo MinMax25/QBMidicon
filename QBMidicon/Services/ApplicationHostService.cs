@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Hosting;
 using QBMidicon.Class.Services;
 using QBMidicon.Contracts.Activation;
 using QBMidicon.Contracts.Services;

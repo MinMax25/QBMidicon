@@ -1,4 +1,4 @@
-﻿namespace QBMidicon.Class.Extensions
+namespace QBMidicon.Class.Extensions
 {
     public static class PageHolder
     {

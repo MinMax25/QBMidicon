@@ -1,4 +1,4 @@
-﻿using System.Windows.Controls;
+using System.Windows.Controls;
 using System.Windows.Navigation;
 using QBMidicon.Contracts.Services;
 using QBMidicon.Contracts.ViewModels;

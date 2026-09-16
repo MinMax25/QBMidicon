@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using libMidi.Messages;
 using libMidi.SMF.interfaces;
 using QBMidicon.Class.Enums;

@@ -1,4 +1,4 @@
-﻿using libQB.DialogServices;
+using libQB.DialogServices;
 using libQB.UndoRedo;
 using libQB.WindowServices;
 using QBMidicon.Contracts.Services;

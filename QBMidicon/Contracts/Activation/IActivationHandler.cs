@@ -1,4 +1,4 @@
-﻿namespace QBMidicon.Contracts.Activation
+namespace QBMidicon.Contracts.Activation
 {
     public interface IActivationHandler
     {
