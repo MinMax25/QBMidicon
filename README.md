@@ -1,16 +1,20 @@
 # QBMidicon
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](Resources/license.txt)
+更新者：ClaudeC
+最終更新日時：2026-11-01 11:19
+
+[![Version](https://img.shields.io/badge/Version-2.0.0-brightgreen)](https://github.com/MinMax25/QBMidicon/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](QBMidicon/Resources/LICENSE.txt)
 [![.NET](https://img.shields.io/badge/.NET-10.0-blueviolet)](https://dotnet.microsoft.com/)
 [![MahApps.Metro](https://img.shields.io/badge/MahApps.Metro-2.4%2B-green)](https://github.com/MahApps/MahApps.Metro)
 [![CommunityToolkit.Mvvm](https://img.shields.io/badge/MVVM%20Toolkit-8.4%2B-orange)](https://github.com/CommunityToolkit/dotnet)
-[![libMidi](https://img.shields.io/badge/libMidi-1.0.7%2B-aqua)](https://github.com/MinMax25/libMidi)
-[![libQB](https://img.shields.io/badge/libQB-1.0.1%2B-lavender)](https://github.com/MinMax25/libQB)
+[![libMidi](https://img.shields.io/badge/libMidi-2.0.0-aqua)](https://github.com/MinMax25/libMidi)
+[![libQB](https://img.shields.io/badge/libQB-2.0.0-lavender)](https://github.com/MinMax25/libQB)
 
 SMF（Standard MIDI File）を読み込み、DAWで使いやすい形式にフィルタリング・変換するWindows用ツールです。  
 
 A Windows tool that loads Standard MIDI Files (SMF) and filters/converts them into a format that's easier to use in a DAW.
 
-<img width="1300" height="800" alt="Image" src="QBMidicon/Resources/Document/Manual/image/Source.png" />
+<img width="1300" height="800" alt="Image" src="QBMidicon/Resources/Document/Manual/ja/image/Source.png" />
 
 ## 概要 / Overview
 
@@ -43,6 +47,19 @@ QBMidicon loads SMF files and lets you inspect their tracks and events, remove u
   - Match lyric events to a track's notes, with a Lyric % match-rate indicator
   - Export a standalone lyric-tagged vocal MIDI file for Synthesizer V
   - Export Raw Data / Filtered Data / Lyric Track Data / Lyric Text Data / Lyric SRT Data individually
+
+---
+
+## Version 2.0.0の主な変更 | Version 2.0.0 Highlights
+
+- 設定の保存形式をJSONからTOMLへ変更しました。以前のJSON設定は自動移行されないため、アップデート後に設定をやり直してください。
+- 標準対応言語は日本語・英語です。このリリースでは追加言語パックを配布していません。
+- 英語版の操作マニュアルを追加しました。
+- libQBとlibMidiを2.0.0へ更新しました。
+- Settings are now stored in TOML instead of JSON. Existing JSON settings are not migrated automatically; configure your preferences again after updating.
+- Japanese and English are the built-in languages. No additional language packs are distributed with this release.
+- Added the English operation manual.
+- Updated libQB and libMidi to 2.0.0.
 
 ---
 

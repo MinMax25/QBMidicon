@@ -11,3 +11,4 @@
 *.userosscache
 *.sln.docstates
 /UnitTest/UnitTest.csproj
+.temp/

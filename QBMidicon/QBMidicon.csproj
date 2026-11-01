@@ -3,6 +3,11 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows7.0</TargetFramework>
+    <Version>2.0.0</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <InformationalVersion>2.0.0</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <RootNamespace>QBMidicon</RootNamespace>
     <UseWPF>true</UseWPF>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -45,10 +50,12 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="libMidi" Version="2.0.0" />
+    <PackageReference Include="libQB" Version="2.0.0" />
     <PackageReference Include="MahApps.Metro" Version="2.4.11" />
     <PackageReference Include="MahApps.Metro.IconPacks.FontAwesome" Version="6.2.1" />
     <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="6.2.1" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.13" />
   </ItemGroup>
 
   <ItemGroup>
@@ -92,11 +99,6 @@
     <Content Include="Languages\**\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\lib\libMidi\libMidi.csproj" />
-    <ProjectReference Include="..\..\lib\libQB\libQB.csproj" />
   </ItemGroup>
 
 </Project>

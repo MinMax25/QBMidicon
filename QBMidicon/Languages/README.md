@@ -1,12 +1,18 @@
 # QBMidicon language packs
+更新者：Codex
+最終更新日時：2026-10-20 09:27
 
-`LanguagePacks` contains the language packs distributed with QBMidicon. Copy only
-the cultures you need into this `Languages` directory before starting the app.
+Japanese and English are the built-in languages. This release does not include
+or distribute additional language packs.
+
+If a separately distributed language pack is available, copy its culture folder
+into the `Languages` directory next to the application before starting it. The
+application loads external language resources from that location.
 
 For example:
 
 ```text
-LanguagePacks/de-DE/  ->  Languages/de-DE/
+<application directory>/Languages/de-DE/
 ```
 
 Each culture directory must contain a non-empty `QBMidicon.Resources.resx` file.
