@@ -1,8 +1,8 @@
 # QBMidicon
 更新者：ClaudeC
-最終更新日時：2026-11-01 11:19
+最終更新日時：2026-11-05 15:13
 
-[![Version](https://img.shields.io/badge/Version-2.0.0-brightgreen)](https://github.com/MinMax25/QBMidicon/releases)
+[![Version](https://img.shields.io/badge/Version-2.0.1-brightgreen)](https://github.com/MinMax25/QBMidicon/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](QBMidicon/Resources/LICENSE.txt)
 [![.NET](https://img.shields.io/badge/.NET-10.0-blueviolet)](https://dotnet.microsoft.com/)
 [![MahApps.Metro](https://img.shields.io/badge/MahApps.Metro-2.4%2B-green)](https://github.com/MahApps/MahApps.Metro)
@@ -47,6 +47,13 @@ QBMidicon loads SMF files and lets you inspect their tracks and events, remove u
   - Match lyric events to a track's notes, with a Lyric % match-rate indicator
   - Export a standalone lyric-tagged vocal MIDI file for Synthesizer V
   - Export Raw Data / Filtered Data / Lyric Track Data / Lyric Text Data / Lyric SRT Data individually
+
+---
+
+## Version 2.0.1の主な変更 | Version 2.0.1 Highlights
+
+- ファイルを保存すると、SourceページのPathが開いたファイルではなく出力ファイル名に変わる不具合を修正しました。
+- Fixed an issue where the Path on the Source page changed to an output file name instead of the opened file after saving.
 
 ---
 
