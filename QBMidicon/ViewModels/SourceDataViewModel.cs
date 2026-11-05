@@ -48,7 +48,8 @@ public partial class SourceDataViewModel : ViewModelBase
     {
         get
         {
-            return _midiData?.Origin == null ? string.Empty : _midiData.FilePath;
+            // MidiData.FilePath は保存時に出力先へ書き換わるため、開いたファイルは設定から取得する
+            return _midiData?.Origin == null ? string.Empty : SettingService.LastOpenedFilePath;
         }
     }
 

@@ -163,14 +163,15 @@ public partial class ShellViewModel : ViewModelBase, IWindowClosingAware
             return;
         }
 
-        Setting.LastOpenedFilePath = path;
-
         try
         {
             var result = SMFLoader.Load(path);
             var convtype = result.IsMultiTimber ? libMidi.SMF.enums.ConvertType.MultiTimber : libMidi.SMF.enums.ConvertType.Instrument;
 
             SMFConverter.Convert(convtype, result, _midiData);
+
+            // 読み込みに成功したファイルだけを「開いているファイル」として記録する
+            Setting.LastOpenedFilePath = path;
             _midiData.Converted?.Invoke(_midiData, new EventArgs());
             CanSave = true;
         }
