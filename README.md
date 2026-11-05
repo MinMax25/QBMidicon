@@ -1,6 +1,4 @@
 # QBMidicon
-更新者：ClaudeC
-最終更新日時：2026-11-05 15:13
 
 [![Version](https://img.shields.io/badge/Version-2.0.1-brightgreen)](https://github.com/MinMax25/QBMidicon/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](QBMidicon/Resources/LICENSE.txt)
